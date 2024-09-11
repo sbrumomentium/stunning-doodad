@@ -6,7 +6,7 @@ using namespace std;
 int menu() {
 	int opcion;
 	do {
-		cout << "\t\tMENU PRINCIPAL\n";
+		cout << "\t\tMani PRINCIPAL\n";
 		cout << "\t1. Registro de datos\n";
 		cout << "\t2. Modificar un dato\n";
 		cout << "\t3. Reporte\n";
