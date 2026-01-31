@@ -1,0 +1,3 @@
+# from typing import Callable, TypeVar
+# F = TypeVar("F", bound=Callable[..., None])
+# def repetir(n: int) -> Callable[[F], F]: ...
