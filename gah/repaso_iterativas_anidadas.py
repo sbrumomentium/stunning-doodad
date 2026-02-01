@@ -40,7 +40,7 @@ def pregunta_3(n):
         i += 1
         cad = cad + "\n"
     return cad
-# print(pregunta_3(6))
+print(pregunta_3(6))
 def pregunta_4(n):
     cad = ""
     i = 1
@@ -55,7 +55,7 @@ def pregunta_4(n):
         i += 1
         cad = cad + "\n"
     return cad
-# print(pregunta_4(6))
+print(pregunta_4(6))
 def pregunta_5(n):
     acumulador = ""
     i = 1

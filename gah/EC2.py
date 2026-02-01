@@ -1,3 +1,6 @@
+
+from math import sqrt, trunc, log, log10
+
 def pregunta_1(vf: float, vi: float, t: float) -> float:
     """
     Parametros:
@@ -37,8 +40,17 @@ def pregunta_3(numero: int) -> float:
         numero (int) :  Es un numero entero
     Retorna:
     	float : numero redondeado a 3 decimales,
-    """
-    return None
+        """
+
+    i = float()
+    i = numero
+    suma = 0
+    while i >= 1:
+        suma=suma+sqrt(i)
+        i=i-1
+    return round(suma,3)
+print(pregunta_3(9))
+
 
 
 def pregunta_4(numero: int, digito: int) -> int:
@@ -49,4 +61,18 @@ def pregunta_4(numero: int, digito: int) -> int:
     Retorna:
         int: Cantidad de veces que el digito aparece en el numero
     """
-    return None
+    ncifra = trunc((log10(numero)+1))
+    divcifra = 1
+    cifra_trunc = 1
+    conteo_digito = 0
+    digit = numero
+
+    while ncifra > 0:
+        divcifra = divcifra * 10
+        digit= trunc((numero % divcifra) / cifra_trunc)
+        cifra_trunc = cifra_trunc * 10
+        if digit == digito:
+            conteo_digito = conteo_digito + 1
+        ncifra = ncifra - 1
+    return conteo_digito
+print(pregunta_4(900098,0))

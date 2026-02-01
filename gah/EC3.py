@@ -25,16 +25,15 @@ def pregunta_2(humedad: int) -> str:
         str: categoria
     """
     if humedad < 30:
-        categoria = "Ambiente seco"
+        return "Ambiente seco"
+    elif humedad <= 59:
+        return "Humedad moderada"
+    elif humedad <=79:
+        return "Humedo"
     else:
-        if humedad <= 60:
-            categoria = "Humedad moderada"
-        else:
-            if humedad <= 80:
-                categoria = "Humedo"
-            else:
-                categoria = "Muy humedo"
-    return categoria
+        return "Muy humedo"
+
+
 
 print(pregunta_2(29))
 
@@ -71,7 +70,7 @@ def pregunta_4(numero: int) -> float:
             suma = suma * sqrt(i)
         i = i + 1
     return round(suma,3)
-print(pregunta_4(5))
+print(pregunta_4(7))
 
 
 

@@ -15,8 +15,8 @@ def pregunta_1(filas : int) -> int:
                 contador += 1
     return contador
 
-print(pregunta_1(3))
-print(pregunta_1(5))
+# print(pregunta_1(3))
+# print(pregunta_1(5))
 
 def pregunta_2(tamanio: int) -> str:
     """
@@ -40,8 +40,8 @@ def pregunta_2(tamanio: int) -> str:
         acumulador=acumulador+ "\n"
     return acumulador
 
-print(pregunta_2(8))
-print(pregunta_2(1))
+# print(pregunta_2(8))
+# print(pregunta_2(1))
 
 def pregunta_3(numerico: int) -> str:
     """
@@ -52,15 +52,24 @@ def pregunta_3(numerico: int) -> str:
         str: Una cadena que representa el codigo de barras "|", dependiendo de su cantidad de divisores.
     """
     acumulador = ""
+
     cifras = str(numerico)
-    for i in cifras:
-        if i == "0" or i == "2" or i == "3" or i == "5" or i == "7":
+    for x in cifras:
+        contador = 0
+        num = int(x)
+        for i in range(2,num):
+            if num % i == 0:
+                contador += 1
+        if contador == 0:
             acumulador = acumulador + " "
         else:
-            intcifra = int(cifras)
-            acumulador = acumulador + "—"
+            for j in range (0,contador):
+                acumulador = acumulador + "|"
+
+
+
     return acumulador
-print(pregunta_3(987808))
+print(pregunta_3(92878308))
 def pregunta_4(tam: int) -> str:
     """
     Genere un patron de asteriscos "*" en forma de cuadrado hueco
@@ -69,4 +78,18 @@ def pregunta_4(tam: int) -> str:
     Retorna:
         str: Un cuadrado hueco formado con "*" de acuerdo al tamanio ingresado
     """
-    return ""
+    acumulador = ""
+    i = 1
+    while i <= tam:
+        j = 1
+
+        while j <= tam:
+            if j == 1 or i == 1 or i == tam or j == tam:
+                acumulador = acumulador + "*"
+            else:
+                acumulador = acumulador + " "
+            j += 1
+        i += 1
+        acumulador = acumulador + "\n"
+    return acumulador
+print(pregunta_4(5))

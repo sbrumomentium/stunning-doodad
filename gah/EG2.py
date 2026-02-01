@@ -1,11 +1,9 @@
 def pregunta_1(numVuelosDeIda: int, numVuelosDeRegreso:
 int) -> float:
     # Tu solución inicia aquí
-    numVuelosDeIda = 25
-    numVuelosDeRegreso = 25
-    total_pasajeros = (numVuelosDeIda + numVuelosDeRegreso) * 180
-    cantidad = total_pasajeros * 22.5
-    return cantidad
+
+    monto = (numVuelosDeIda + numVuelosDeRegreso) * 180 * 22.5
+    return monto
     # Tu solución termina aquí. Recuerda retornar lo que hayas calculado.
 print(pregunta_1(22,21))
 def pregunta_2(anguloEnRadianes: float) -> float:
