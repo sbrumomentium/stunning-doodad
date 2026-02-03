@@ -2,7 +2,6 @@ from operator import truediv
 
 
 def pregunta_1(fiebre: bool, dolor_cabeza: bool, ayuno: bool):
-
     if fiebre == True:
         resultado = True
         return resultado
