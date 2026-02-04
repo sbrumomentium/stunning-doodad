@@ -5,7 +5,20 @@ def pregunta_1(n: int) -> str:
     Retorna:
         str: cadena de caracteres que tiene el triangulo
     """
-    return None
+    acumulador = ""
+    i = 1
+    while i <= n:
+        j = n
+
+        while j != 0:
+            if (j == i) or (n == i) or (j == 1):
+                acumulador = acumulador + "*"
+            else:
+                acumulador = acumulador + " "
+            j -= 1
+        i += 1
+        acumulador = acumulador + "\n"
+    return acumulador
 
 
 def pregunta_2(m: float, vf: float, vi: float, t: float) -> float:
