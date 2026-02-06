@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="661e0170-059b-4d93-996f-12a2e7edaa91" name="Changes" comment="big change">
-      <change afterPath="$PROJECT_DIR$/PF/acciones.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PF/cartas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PF/estado.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PF/img/Eventos/evento_carta_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PF/img/Eventos/evento_inexistente.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PF/img/Eventos/evento_sin_carta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PF/img/fondo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PF/img/fondo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PF/img/fondo3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PF/img/fondo4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PF/img/fondo5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PF/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gah/dicc_ejercicio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gah/TC.py" beforeDir="false" afterPath="$PROJECT_DIR$/gah/TC.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plantillas/plantilla_EG5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/stunning-doodad.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stunning-doodad.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,34 +54,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.EC6.executor": "Run",
-    "Python.EG3.executor": "Debug",
-    "Python.EG4.executor": "Run",
-    "Python.Unnamed.executor": "Run",
-    "Python.dicc_ejercicio.executor": "Run",
-    "Python.imagen_primer.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.sesion3.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ai.playground.ignore.import.keys.banner.in.settings": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/carlos/PycharmProjects/stunning-doodad/PF",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.EC6.executor&quot;: &quot;Run&quot;,
+    &quot;Python.EG3.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.EG4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dicc_ejercicio.executor&quot;: &quot;Run&quot;,
+    &quot;Python.imagen_primer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sesion3.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/carlos/PycharmProjects/stunning-doodad/PF&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/PF" />

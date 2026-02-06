@@ -38,4 +38,3 @@ def pregunta_4(lista: list) -> list:
         list : es la lista normalizada
     """
     return None
-
