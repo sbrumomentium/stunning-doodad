@@ -1,4 +1,6 @@
 # acciones.py
+from PF.estado import calcular_estado_final
+
 
 # ---------------- Produccion ----------------
 
@@ -23,6 +25,17 @@ def produccion_producir(estado):
         • Esto se debe a que el proceso productivo tiene diferentes fases
     - Si no hay suficientes insumos no se puede producir.
     """
+    lista_maquinas = estado ["Maquinas (total/activas/averiadas)"].split("/")
+    maquinas_activas = lista_maquinas[1]
+    maquinas_trabajando = estado ["Insumos disponibles"] //2000
+    estado["Insumos disponibles"] = estado["Insumos disponibles"] - maquinas_trabajando * 40000
+    produccion_base = estado["Produccion_por_maquina"]
+    adicionales = estado["Cantidad de empleados"] - 4
+    if adicionales < 0:
+        adicionales = 0
+    produccion_aumentada = produccion_base + produccion_base * 0.1 * adicionales
+    estado["Inventario"] = estado["Inventario"] + produccion_aumentada * maquinas_trabajando
+    estado["Produccion_tercer_mes"] = estado["Produccion_tercer_mes"] + produccion_aumentada * maquinas_trabajando
     return estado
 
 def produccion_pedido_encargo(estado):
@@ -52,6 +65,9 @@ def produccion_mejorar_proceso(estado):
       • O puedes modificar la formula de produccion_producir para que las 20,000 unidades a producir aumenten
     - Esta mejora la hacen los ingneieros de la empresa, por lo que no genera desembolso de la caja.
     """
+    mejorar_proceso = 1
+    mejorar = mejorar_proceso + 1.05
+    calcular_estado_final(estado * mejorar_proceso)
     return estado
 
 def produccion_mantenimiento_maquinaria(estado):
@@ -73,6 +89,12 @@ def produccion_mantenimiento_maquinaria(estado):
         • Debes implementar un contador en el Estado que indique cuantos turnos quedan de proteccion.
     - Este mantenimiento lo realiza el personal de la empresa, por lo que no genera desembolso de la caja.
     """
+    lista = estado ["Maquinas (total/activas/averiadas)"].split("/")
+    total = lista[0]
+    cadena_nueva = total + "/"+ total +"0"
+    estado["Maquinas (total/activas/averiadas)"] = cadena_nueva
+    estado["MantenimientoHecho"] = True
+    estado["TurnosMantenimiento"] = 3
     return estado
 
 def produccion_comprar_nueva_maquina(estado):
@@ -84,6 +106,11 @@ def produccion_comprar_nueva_maquina(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, compras la maquina nueva y te haces una deuda de S/ 11,200
     """
+    if estado["Caja disponible"]>=10000:
+        estado["Caja disponible"] = estado ["Caja disponible"] - 10000
+    else:
+        mefalta = 10000 - estado["Caja disponible"]
+        estado["Caja disponible"] = estado["Deuda pendiente"]+ mefalta*1.12
     estado["Caja disponible"] = estado["Caja Disponible"]
     cadena = estado["Maquinas (total/activas/averiadas)"]
     valores =cadena.split("/")
@@ -93,7 +120,7 @@ def produccion_comprar_nueva_maquina(estado):
     total += 1
     activas += 1
     resultado = str(total) +"/"+str(activas) +"/"+str(averiadas)
-    estado["Maquinas"]
+    estado["Maquinas (total/activas/averiadas)"] = resultado
 
 
     return estado
@@ -262,6 +289,7 @@ def marketing_co_branding(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, realizas la alianza, y te haces una deuda de S/ 3,360
     """
+
     return estado
 
 
