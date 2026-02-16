@@ -24,8 +24,20 @@ def produccion_producir(estado):
         • Esto se debe a que el proceso productivo tiene diferentes fases
     - Si no hay suficientes insumos no se puede producir.
     """
-    if "Prohibir Produccion" in estado and estado["Prohibir Produccion"] == True:
-        return estado
+    lista_maquinas = estado["Maquinas (total/activas/dañadas)"].split("/")
+    print(lista_maquinas)
+    maquinas_activas = lista_maquinas[1]
+    print(maquinas_activas)
+    maquinas_trabajando = estado["Insumos disponibles"] // 40000
+    estado["Insumos disponibles"] = estado["Insumos disponibles"] - maquinas_trabajando * 40000
+    produccion_base = estado["Produccion_por_maquina"]
+    adicionales = estado["Cantidad de empleados"] - 4
+    if adicionales < 0:
+        adicionales = 0
+    produccion_aumentada = produccion_base + produccion_base * 0.1 * adicionales
+    estado["Inventario"] = estado["Inventario"] + produccion_aumentada * maquinas_trabajando
+    estado["Produccion_tercer_mes"] = estado["Produccion_tercer_mes"] + produccion_aumentada * maquinas_trabajando
+
 
     return estado
 
@@ -43,17 +55,17 @@ def produccion_pedido_encargo(estado):
     - Si no hay suficientes insumos disponibles, no se puede producir por encargo.
     """
     puede_producir = True
-    if estado.get("Prohibir Produccion", False):
+
+    if "Prohibir Produccion" in estado and estado["Prohibir Produccion"]:
         puede_producir = False
+
     if estado["Insumos disponibles"] < 10000:
         puede_producir = False
 
     if puede_producir:
         estado["Insumos disponibles"] -= 10000
         estado["Caja disponible"] += 50000
-
     return estado
-
 
 def produccion_mejorar_proceso(estado):
     """
@@ -67,8 +79,9 @@ def produccion_mejorar_proceso(estado):
       • O puedes modificar la formula de produccion_producir para que las 20,000 unidades a producir aumenten
     - Esta mejora la hacen los ingneieros de la empresa, por lo que no genera desembolso de la caja.
     """
-    estado["Mejorar_proceso"] = estado("Mejorar_proceso", 1.0) + 0.05
+    estado["Mejorar_proceso"] += 0.05
     return estado
+
 
 def produccion_mantenimiento_maquinaria(estado):
     """
@@ -142,6 +155,7 @@ def rh_contratar_personal_permanente(estado):
     - Si se vuelve a ejecutar esta accion, se aumentan 4,000 mas en salarios y 1 mas en numero de empleados.
     - Se puede seguir aumentnto el personal infinitas veces.
     """
+
     estado["Total Salarios"] += 4000
     estado["Numero de empleados"] += 1
     return estado
@@ -219,6 +233,28 @@ def rh_capacitar_seguridad(estado):
     - También impide por 3 turnos cualquier robo interno, debido al aumento en seguridad.
     - También impide por 3 turnos que los empleados descarguen virus informático por error.
     """
+    estado["SeguridadActiva"] = True
+
+    if "TurnosSeguridad" in estado:
+        estado["TurnosSeguridad"] += 3
+    else:
+        estado["TurnosSeguridad"] = 3
+
+    if "BloqueoAccidentes" in estado:
+        estado["BloqueoAccidentes"] += 3
+    else:
+        estado["BloqueoAccidentes"] = 3
+
+    if "BloqueoRobos" in estado:
+        estado["BloqueoRobos"] += 3
+    else:
+        estado["BloqueoRobos"] = 3
+
+    if "BloqueoVirus" in estado:
+        estado["BloqueoVirus"] += 3
+    else:
+        estado["BloqueoVirus"] = 3
+
     return estado
 
 def rh_subir_sueldos(estado):
@@ -370,6 +406,16 @@ def compras_comprar_insumos_nacionales(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, compras los insumos, y te haces una deuda de S/ 11,200
     """
+    if not estado["CreditoConcedido"]
+        if estado["Caja disponible"] >= 10000:
+            estado["Caja disponible"] = estado["Caja disponible"] - 10000
+        else:
+            mefalta = 10000 - estado["Caja disponible"]
+            estado["Caja disponible"] = 0
+            estado["Deuda pendiente"] = estado["Deuda pendiente"] + mefalta * 1.12
+    else:
+        estado["Insumos disponibles"] = estado["Insumos disponibles"]+ 50000
+        estado["pagos90"]= estado ["pagos90"] +10000
 
     return estado
 

@@ -36,7 +36,9 @@ def calcular_estado_inicial():
         "DescuentoCompra":                  False,
         "CreditoConcedido":                 False,
         "EcommerceActivo":                  False,
-
+        "pagos90":                          0,
+        "pagos60":                          0,
+        "pagos30":                          0,
         # Contadores y flags temporales
         "TurnosProduccionExtra":            0,
         "DemandaExtraTemporal":             0,
@@ -265,4 +267,9 @@ def calcular_estado_final(estado):
 
     estado["InventarioMesAnterior"] = estado["Inventario"]
 
+
+    # estado["pagos30"] = estado["pagos60"]
+    # estado["pagos60"] = 0
+    # estado["pagos60"] = estado["pagos90"]
+    # estado["pagos90"] = 0
     return estado
