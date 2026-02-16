@@ -57,7 +57,8 @@ def calcular_estado_inicial():
         "Turnos_ventas_20porciento":        0,
         "Pedidos_extra_prox_turno":         0,
         "BloqueoCaosDemanda":               0,
-        "BloqueoCaosReputacion":            0
+        "BloqueoCaosReputacion":            0,
+        "Produccion_tercer_mes":            0
     }
 
 def calcular_estado_final(estado):

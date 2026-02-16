@@ -24,7 +24,7 @@ def produccion_producir(estado):
         • Esto se debe a que el proceso productivo tiene diferentes fases
     - Si no hay suficientes insumos no se puede producir.
     """
-    lista_maquinas = estado["Maquinas (total/activas/dañadas)"].split("/")
+    lista_maquinas = estado["Maquinas (total/activas/averiadas)"].split("/")
     print(lista_maquinas)
     maquinas_activas = lista_maquinas[1]
     print(maquinas_activas)
@@ -119,12 +119,13 @@ def produccion_comprar_nueva_maquina(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, compras la maquina nueva y te haces una deuda de S/ 11,200
     """
-    if estado["Caja disponible"]>=10000:
-        estado["Caja disponible"] = estado ["Caja disponible"] - 10000
+    costo = 10000
+    if estado["Caja disponible"]>=costo:
+        estado["Caja disponible"] = estado ["Caja disponible"] - costo
     else:
-        mefalta = 10000 - estado["Caja disponible"]
+        mefalta = costo - estado["Caja disponible"]
         estado["Caja disponible"] = estado["Deuda pendiente"]+ mefalta*1.12
-    estado["Caja disponible"] = estado["Caja Disponible"]
+    estado["Caja disponible"] = 0
     cadena = estado["Maquinas (total/activas/averiadas)"]
     valores =cadena.split("/")
     total = int(valores[0])
@@ -155,8 +156,13 @@ def rh_contratar_personal_permanente(estado):
     - Si se vuelve a ejecutar esta accion, se aumentan 4,000 mas en salarios y 1 mas en numero de empleados.
     - Se puede seguir aumentnto el personal infinitas veces.
     """
-
-    estado["Total Salarios"] += 4000
+    costo = 4000
+    if estado["Caja disponible"] >= costo:
+        estado["Caja disponible"] = estado["Caja disponible"] - costo
+    else:
+        mefalta = costo - estado["Caja disponible"]
+        estado["Caja disponible"] = estado["Deuda pendiente"] + mefalta * 1.12
+    estado["Total Salarios"] += costo
     estado["Numero de empleados"] += 1
     return estado
 
@@ -223,6 +229,33 @@ def rh_medicion_clima(estado):
     - También bloquea por 5 turnos  cartas del caos relacionadas a la fuga de talento.
     - En resumen, el buen clima laboral evita errores manuales por 5 turnos.
     """
+    estado["ClimaLaboralActivo"] = True
+
+    # Turnos clima laboral
+    if "TurnosClimaLaboral" in estado:
+        estado["TurnosClimaLaboral"] += 5
+    else:
+        estado["TurnosClimaLaboral"] = 5
+
+    # Bloqueo huelgas
+    if "BloqueoHuelgas" in estado:
+        estado["BloqueoHuelgas"] += 5
+    else:
+        estado["BloqueoHuelgas"] = 5
+
+    # Bloqueo errores manuales
+    if "BloqueoErroresManual" in estado:
+        estado["BloqueoErroresManual"] += 5
+    else:
+        estado["BloqueoErroresManual"] = 5
+
+    # Bloqueo fuga de talento
+    if "BloqueoFugaTalento" in estado:
+        estado["BloqueoFugaTalento"] += 5
+    else:
+        estado["BloqueoFugaTalento"] = 5
+
+
     return estado
 
 def rh_capacitar_seguridad(estado):
@@ -296,20 +329,39 @@ def marketing_lanzar_campania(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, lanzas la campaña, y te haces una deuda de S/ 8,960
     """
-    estado = _realizar_gasto(estado, 8000)
+    if estado["Caja disponible"] < 8000:
+        faltante = 8000 - estado["Caja disponible"]
+        prestamo = faltante * 1.12
+        estado["Deuda pendiente"] += prestamo
+        estado["Caja disponible"] += faltante
+    estado["Caja disponible"] -= 8000
 
-    nivel_actual = int(estado["Reputacion del mercado"].split()[1])
-    if nivel_actual < 7:
+    reputacion_actual = int(estado["Reputacion del mercado"].split()[1])
+    if reputacion_actual < 7:
         estado["Reputacion del mercado"] = "Nivel 7"
 
-    estado["DemandaExtraTemporal"] = estado.get("DemandaExtraTemporal", 0) + 4000
-    estado["Aumento_ventas_20porciento"] = True
-    estado["Turnos_ventas_20porciento"] = 2
+    estado["DemandaExtraTemporal"] += 4000
 
-    # Flags de protección
-    estado["BloqueoCaosDemanda"] = 5
-    estado["BloqueoCaosReputacion"] = 5
+    if "CampaniaTurnosRestantes" not in estado:
+        estado["CampaniaTurnosRestantes"] = 2
+    else:
+        estado["CampaniaTurnosRestantes"] += 2
 
+    if estado["Inventario"] > 0:
+        aumento = int(estado["Inventario"] * 0.20)
+        estado["Unidades vendidas"] += aumento
+        estado["Inventario"] -= aumento
+    if "BloqueoCaosDemanda" not in estado:
+        estado["BloqueoCaosDemanda"] = 5
+    else:
+        estado["BloqueoCaosDemanda"] += 5
+
+    if "BloqueoCaosReputacion" not in estado:
+        estado["BloqueoCaosReputacion"] = 5
+    else:
+        estado["BloqueoCaosReputacion"] += 5
+
+    estado["BrandingActivo"] = True
     return estado
 
 
@@ -326,6 +378,34 @@ def marketing_invertir_branding(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, realizas el branding, y te haces una deuda de S/ 13,440
     """
+    if estado["Caja disponible"] < 12000:
+       faltante = 12000 - estado["Caja disponible"]
+       prestamo = faltante * 1.12
+       estado["Deuda pendiente"] += prestamo
+       estado["Caja disponible"] += faltante
+    estado["Caja disponible"] -= 12000
+
+
+    reputacion_actual = int(estado["Reputacion del mercado"].split()[1])
+
+
+    if estado["BrandingActivo"] == False:
+       estado["ReputacionOriginal"] = estado["Reputacion del mercado"]
+
+
+    if reputacion_actual < 8:
+       estado["Reputacion del mercado"] = "Nivel 8"
+
+
+    estado["BrandingActivo"] = True
+    estado["BrandingTurnosRestantes"] = 5
+
+
+    if "BloqueoCaosReputacion" not in estado:
+       estado["BloqueoCaosReputacion"] = 5
+    else:
+       estado["BloqueoCaosReputacion"] += 5
+    return estado
 
 
 
@@ -341,6 +421,28 @@ def marketing_estudio_mercado(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, realizas el estudio de mercado, y te haces una deuda de S/ 5,600
     """
+    if estado["Caja disponible"] < 5000:
+       faltante = 5000 - estado["Caja disponible"]
+       prestamo = faltante * 1.12
+       estado["Deuda pendiente"] += prestamo
+       estado["Caja disponible"] += faltante
+    estado["Caja disponible"] -= 5000
+
+
+    estado["Reputacion del mercado"] = "Nivel 6"
+
+
+    if "BloqueoCaosReputacion" not in estado:
+       estado["BloqueoCaosReputacion"] = 5
+    else:
+       estado["BloqueoCaosReputacion"] += 5
+
+
+    if "ProteccionCompetidores" not in estado:
+       estado["ProteccionCompetidores"] = 3
+    else:
+       estado["ProteccionCompetidores"] += 3
+    return estado
 
 
 
@@ -360,6 +462,17 @@ def marketing_abrir_ecommerce(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, te haces una deuda de S/ 22,400 o S/2,240 según corresponda
     """
+    if estado["Caja disponible"] >= 3000:
+        estado["Caja disponible"] = estado["Caja disponible"] - 3000
+    else:
+        mefalta = 3000 - estado["Caja disponible"]
+    estado["Deuda pendiente"] = estado["Deuda pendiente"] + mefalta * 1.12
+    estado["Caja disponible"] = 0
+    estado["Aumento_ventas_20porciento"] = True
+    estado["Turnos_ventas_20porciento"] = 2
+    estado["Pedidos_extra_este_turno"] = estado["Pedidos_extra_este_turno"] + 300000
+    estado["Pedidos_extra_prox_turno"] = estado["Pedidos_extra_prox_turno"] + 300000
+    return estado
 
 
 def marketing_co_branding(estado):
@@ -406,16 +519,21 @@ def compras_comprar_insumos_nacionales(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, compras los insumos, y te haces una deuda de S/ 11,200
     """
-    if not estado["CreditoConcedido"]
-        if estado["Caja disponible"] >= 10000:
-            estado["Caja disponible"] = estado["Caja disponible"] - 10000
-        else:
-            mefalta = 10000 - estado["Caja disponible"]
-            estado["Caja disponible"] = 0
-            estado["Deuda pendiente"] = estado["Deuda pendiente"] + mefalta * 1.12
+    costo = 10000
+
+    # Ver si existe descuento negociado
+    if "DescuentoCompra" in estado:
+        costo = costo * estado["DescuentoCompra"]
+
+    if estado["Caja disponible"] >= costo:
+        estado["Caja disponible"] -= costo
     else:
-        estado["Insumos disponibles"] = estado["Insumos disponibles"]+ 50000
-        estado["pagos90"]= estado ["pagos90"] +10000
+        falta = costo - estado["Caja disponible"]
+        estado["Deuda pendiente"] += falta * 1.12
+        estado["Caja disponible"] = 0
+
+    estado["Insumos disponibles"] += 500000
+
 
     return estado
 
@@ -428,6 +546,17 @@ def compras_comprar_insumos_importados(estado):
         • Es decir, compras los insumos, y te haces una deuda de S/ 15,680
     """
 
+    costo = 14000
+
+    if estado["Caja disponible"] >= costo:
+        estado["Caja disponible"] -= costo
+    else:
+        falta = costo - estado["Caja disponible"]
+        estado["Deuda pendiente"] += falta * 1.12
+        estado["Caja disponible"] = 0
+
+    estado["Insumos disponibles"] += 800000
+    return estado
 
 def compras_comprar_insumos_importados_premium(estado):
     """
@@ -441,8 +570,25 @@ def compras_comprar_insumos_importados_premium(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, compras los insumos, y te haces una deuda de S/ 28,000
     """
+    costo = 25000
 
 
+    if estado["Caja disponible"] >= costo:
+        estado["Caja disponible"] -= costo
+    else:
+        falta = costo - estado["Caja disponible"]
+        estado["Deuda pendiente"] += falta * 1.12
+        estado["Caja disponible"] = 0
+
+
+    estado["Insumos disponibles"] += 900000
+
+
+    # Activar efecto calidad por 3 turnos
+    estado["CalidadPremiumActiva"] = True
+    estado["TurnosCalidadPremium"] = 3
+
+    return estado
 def compras_vender_excedentes_insumos(estado):
     """
     4. Venta de excedentes de insumos:
@@ -452,7 +598,16 @@ def compras_vender_excedentes_insumos(estado):
       pero los vendemos a 0.30 centimos cada uno.
     La accion se ejecuta por 3 turnos, incluido este.
     """
-    estado["TurnosVentaExcedentes"] = 3
+    if estado["Insumos disponibles"] > 0:
+        cantidad = estado["Insumos disponibles"] * 0.10
+        ingreso = cantidad * 0.30
+
+        estado["Insumos disponibles"] -= cantidad
+        estado["Caja disponible"] += ingreso
+
+        estado["VentaExcedentesActiva"] = True
+        estado["TurnosVentaExcedentes"] = 3
+
     return estado
 
 def compras_negociar_precio(estado):
@@ -465,6 +620,19 @@ def compras_negociar_precio(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, haces la negociación de precios, y te haces una deuda de S/ 5,600
     """
+    costo = 5000
+
+
+    if estado["Caja disponible"] >= costo:
+        estado["Caja disponible"] -= costo
+    else:
+        falta = costo - estado["Caja disponible"]
+        estado["Deuda pendiente"] += falta * 1.12
+        estado["Caja disponible"] = 0
+
+
+    # Descuento permanente
+    estado["DescuentoCompra"] = 0.7
 
 
 def compras_negociar_credito(estado):
@@ -479,13 +647,17 @@ def compras_negociar_credito(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, haces la negociación al crédito, y te haces una deuda de S/ 2,240.
     """
-    if estado["Caja disponible"]>=2000:
-        estado["Caja disponible"] = estado["Caja disponible"] - 2000
+    costo = 2000
+
+    if estado["Caja disponible"] >= costo:
+        estado["Caja disponible"] -= costo
     else:
-        mefalta = 2000-estado["Caja disponible"]
+        falta = costo - estado["Caja disponible"]
+        estado["Deuda pendiente"] += falta * 1.12
         estado["Caja disponible"] = 0
-        estado["Deuda Pendiente"] = estado ["Deuda Pendiente"] +mefalta*1.12
-    estado["CreditoConcedido"]=True
+
+    estado["CreditoConcedido"] = True
+
     return estado
 
 
@@ -511,6 +683,43 @@ def finanzas_pagar_proveedores(estado):
 
     Si no hay dinero, debes pedir un préstamo al 12% de interes equivalente al total del monto a pagar.
     """
+    # Obtener cada deuda solo si existe
+    deuda30 = 0
+    deuda60 = 0
+    deuda90 = 0
+
+    if "deuda30" in estado:
+        deuda30 = estado["deudas30"]
+
+    if "deudas60" in estado:
+        deuda60 = estado["deudas60"]
+
+    if "deudas90" in estado:
+        deuda90 = estado["deudas90"]
+
+    total_deuda = deuda30 + deuda60 + deuda90
+
+    if total_deuda > 0:
+
+        monto_con_descuento = total_deuda * 0.95
+
+        if estado["Caja disponible"] >= monto_con_descuento:
+            estado["Caja disponible"] -= monto_con_descuento
+        else:
+            falta = monto_con_descuento - estado["Caja disponible"]
+            estado["Deuda pendiente"] += falta * 1.12
+            estado["Caja disponible"] = 0
+
+        # Cancelar cuentas si existen
+        if "deudas30" in estado:
+            estado["deudas30"] = 0
+
+        if "deudas60" in estado:
+            estado["deudas60"] = 0
+
+        if "deudas90" in estado:
+            estado["deudas90"] = 0
+
 
     return estado
 
@@ -584,8 +793,28 @@ def finanzas_crear_fondo_emergencia(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, adquieres el fondo de emergencia, y te haces una deuda de S/ 56,000
     """
+    fondo_existe = False
+
+    # Verificar si ya existe la clave
+    if "Fondo emergencia" in estado:
+        if estado["Fondo emergencia"]:
+            fondo_existe = True
+
+    # Solo se crea si no existe
+    if not fondo_existe:
+
+        if estado["Caja disponible"] >= 50000:
+            estado["Caja disponible"] -= 50000
+        else:
+            falta = 50000 - estado["Caja disponible"]
+            estado["Deuda pendiente"] += falta * 1.12
+            estado["Caja disponible"] = 0
+
+        estado["Fondo emergencia"] = True
+
 
     return estado
+
 
 def finanzas_no_hacer_nada(estado):
     """
