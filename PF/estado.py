@@ -21,7 +21,7 @@ def calcular_estado_inicial():
         "CuentasPorPagar":                  [],
         "Reputacion del mercado":           "Nivel 3",
         "Multas e indemnizaciones":         0,
-        "Maquinas (total/activas/dañadas)": "5/5/0",
+        "Maquinas (total/activas/averiadas)":"5/5/0",
         "Produccion_por_maquina":           2000,
         "Mejorar_proceso":                  1.0,
 
@@ -141,7 +141,7 @@ def calcular_estado_final(estado):
 
 
     factor_ventas = 1.0
-    if estado.get("Aumento_ventas_20porciento", False) or estado.get("IncentivosActivos", False):
+    if estado("Aumento_ventas_20porciento", False) or estado("IncentivosActivos", False):
         factor_ventas = 1.2
 
 
@@ -237,7 +237,7 @@ def calcular_estado_final(estado):
     ]
 
     for campo in campos_a_reducir:
-        if estado.get(campo, 0) > 0:
+        if estado(campo, 0) > 0:
             estado[campo] -= 1
 
 
