@@ -123,26 +123,6 @@ def calcular_estado_final(estado):
          entonces, el excedente caduca (hasta completar el 10% que vence).
        - Puedes apoyarte de las variables "InventarioMesAnterior" e "Inventario"
     """
-    # # 1) Venta automatica
-    # estado["Inventario"] = estado["Inventario"]
-    # estado["Unidades vendidas"] = estado["Unidades vendidas"]
-    # estado["Caja disponible"] = estado["Caja disponible"]
-    # # 2) Actualizacion de pedidos por atender
-    # estado["Pedidos por atender"] = estado["Pedidos por atender"]
-    # estado["Reputacion del mercado"] = estado["Reputacion del mercado"]
-    # # 3) Pago de la nomina del mes actual
-    # estado["Sueldos por pagar"] = estado["Sueldos por pagar"]
-    # estado["Caja disponible"] = estado["Caja disponible"]
-    # # 4) Generacion de la nomina del proximo mes
-    # estado["Sueldos por pagar"] = estado["Sueldos por pagar"]
-    # # 5) Anular multas, accidentes, y demas cartas del caos
-    # estado["Prohibir Produccion"] = estado["Prohibir Produccion"]
-    # # 6) Produccion en automatico
-    # estado["Inventario"] = estado["Inventario"]
-    # # 7) Actualizacion de flags temporales y decremento de contadores
-    # estado["TurnosProduccionExtra"] = estado["TurnosProduccionExtra"]
-    # # 8) Perdida de inventario:
-    # estado["Inventario"] = estado["Inventario"]
 
     # 1) Venta automatica
 
@@ -171,7 +151,7 @@ def calcular_estado_final(estado):
     ventas_reales = min(capacidad_venta_maxima, inventario_actual)
 
 
-    estado["Unidades vendidas"] = ventas_reales  # Reinicia el contador de ventas del mes
+    estado["Unidades vendidas"] = ventas_reales
     estado["Inventario"] -= ventas_reales
     estado["Caja disponible"] += (ventas_reales * precio_venta)
 
@@ -367,9 +347,3 @@ def calcular_estado_final(estado):
     estado["InventarioMesAnterior"] = estado["Inventario"]
 
     return estado
-
-    # estado["pagos30"] = estado["pagos60"]
-    # estado["pagos60"] = 0
-    # estado["pagos60"] = estado["pagos90"]
-    # estado["pagos90"] = 0
-

@@ -55,16 +55,17 @@ def produccion_pedido_encargo(estado):
     - Si no hay suficientes insumos disponibles, no se puede producir por encargo.
     """
     puede_producir = True
+    maquinasactivas = estado["Maquinas (total/activas/averiadas)".split("/")][1]
+    if maquinasactivas >= 1:
+        if "Prohibir Produccion" in estado and estado["Prohibir Produccion"]:
+            puede_producir = False
+        if estado["Insumos disponibles"] < 10000:
+            puede_producir = False
 
-    if "Prohibir Produccion" in estado and estado["Prohibir Produccion"]:
-        puede_producir = False
+        if puede_producir:
+            estado["Insumos disponibles"] -= 10000
+            estado["Caja disponible"] += 50000
 
-    if estado["Insumos disponibles"] < 10000:
-        puede_producir = False
-
-    if puede_producir:
-        estado["Insumos disponibles"] -= 10000
-        estado["Caja disponible"] += 50000
     return estado
 
 def produccion_mejorar_proceso(estado):
