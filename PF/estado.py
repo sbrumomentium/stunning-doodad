@@ -123,79 +123,137 @@ def calcular_estado_final(estado):
          entonces, el excedente caduca (hasta completar el 10% que vence).
        - Puedes apoyarte de las variables "InventarioMesAnterior" e "Inventario"
     """
-    # 1. GENERAR DEMANDA (PEDIDOS)
-    # ---------------------------------------------------------
-    nivel_reputacion = int(estado["Reputacion del mercado"].split()[1])
-    demanda_base = nivel_reputacion * 1000
+    # # 1) Venta automatica
+    # estado["Inventario"] = estado["Inventario"]
+    # estado["Unidades vendidas"] = estado["Unidades vendidas"]
+    # estado["Caja disponible"] = estado["Caja disponible"]
+    # # 2) Actualizacion de pedidos por atender
+    # estado["Pedidos por atender"] = estado["Pedidos por atender"]
+    # estado["Reputacion del mercado"] = estado["Reputacion del mercado"]
+    # # 3) Pago de la nomina del mes actual
+    # estado["Sueldos por pagar"] = estado["Sueldos por pagar"]
+    # estado["Caja disponible"] = estado["Caja disponible"]
+    # # 4) Generacion de la nomina del proximo mes
+    # estado["Sueldos por pagar"] = estado["Sueldos por pagar"]
+    # # 5) Anular multas, accidentes, y demas cartas del caos
+    # estado["Prohibir Produccion"] = estado["Prohibir Produccion"]
+    # # 6) Produccion en automatico
+    # estado["Inventario"] = estado["Inventario"]
+    # # 7) Actualizacion de flags temporales y decremento de contadores
+    # estado["TurnosProduccionExtra"] = estado["TurnosProduccionExtra"]
+    # # 8) Perdida de inventario:
+    # estado["Inventario"] = estado["Inventario"]
 
-    if estado["BrandingActivo"]:
-        demanda_base = int(demanda_base * 1.10)
+    # 1) Venta automatica
 
-    demanda_total = demanda_base + estado["DemandaExtraTemporal"]
-
-    if estado["EcommerceActivo"]:
-        demanda_total += 5000
-
-    estado["Pedidos por atender"] = demanda_total
-
-    # 2. VENTA AUTOMÁTICA
-    # ---------------------------------------------------------
-    inventario_disponible = estado["Inventario"]
-
-
-    factor_ventas = 1.0
-    if estado("Aumento_ventas_20porciento", False) or estado("IncentivosActivos", False):
-        factor_ventas = 1.2
-
-
-    ventas_extra_ecommerce = 2000 if estado["EcommerceActivo"] else 0
-
-    posible_venta = estado["Pedidos por atender"]
+    precio_venta = 4.5
 
 
-    posible_venta = int(posible_venta * factor_ventas) + ventas_extra_ecommerce
+    demanda_actual = estado["Pedidos por atender"]
 
-    ventas_reales = min(posible_venta, inventario_disponible)
 
-    estado["Unidades vendidas"] = ventas_reales
+    factor_venta = 1.0
+
+    if "Aumento_ventas_20porciento" in estado and estado["Aumento_ventas_20porciento"]:
+        factor_venta += 0.20
+
+    if "IncentivosActivos" in estado and estado["IncentivosActivos"]:
+        factor_venta += 0.20
+
+    if "CalidadPremiumActiva" in estado and estado["CalidadPremiumActiva"]:
+        factor_venta += 0.20
+
+
+    capacidad_venta_maxima = int(demanda_actual * factor_venta)
+
+
+    inventario_actual = estado["Inventario"]
+    ventas_reales = min(capacidad_venta_maxima, inventario_actual)
+
+
+    estado["Unidades vendidas"] = ventas_reales  # Reinicia el contador de ventas del mes
     estado["Inventario"] -= ventas_reales
+    estado["Caja disponible"] += (ventas_reales * precio_venta)
 
 
-    ingresos = ventas_reales * 4.5
-    estado["Caja disponible"] += ingresos
+    demanda_insatisfecha = capacidad_venta_maxima - ventas_reales
+
+    if demanda_insatisfecha > 5000:
+
+        nivel_str = estado["Reputacion del mercado"].split()[1]
+        nivel_int = int(nivel_str)
+        if nivel_int > 1:
+            nuevo_nivel = nivel_int - 1
+            estado["Reputacion del mercado"] = "Nivel " + str(nuevo_nivel)
 
 
-    if (estado["Pedidos por atender"] - ventas_reales) > 5000:
-        actual = int(estado["Reputacion del mercado"].split()[1])
-        if actual > 1:
-            estado["Reputacion del mercado"] = f"Nivel {actual - 1}"
+    # 2) Actualizacion de pedidos por atender
 
-    # 3. PAGO DE SUELDOS
-    # ---------------------------------------------------------
+    nivel_str = estado["Reputacion del mercado"].split()[1]
+    nivel_reputacion = int(nivel_str)
+
+
+    nueva_demanda = nivel_reputacion * 1000
+
+
+    if "BrandingActivo" in estado and estado["BrandingActivo"]:
+        nueva_demanda = int(nueva_demanda * 1.10)
+
+
+    if "CalidadPremiumActiva" in estado and estado["CalidadPremiumActiva"]:
+        nueva_demanda = int(nueva_demanda * 1.20)
+
+
+    if "EcommerceActivo" in estado and estado["EcommerceActivo"]:
+        nueva_demanda += 5000
+
+
+    if "CampaniaTurnosRestantes" in estado and estado["CampaniaTurnosRestantes"] > 0:
+        nueva_demanda += 4000
+
+
+    if "DemandaExtraTemporal" in estado:
+        nueva_demanda += estado["DemandaExtraTemporal"]
+
+
+    if "Pedidos_extra_prox_turno" in estado and estado["Pedidos_extra_prox_turno"] > 0:
+        estado["DemandaExtraTemporal"] = estado["Pedidos_extra_prox_turno"]
+        estado["Pedidos_extra_prox_turno"] = 0
+    else:
+
+        estado["DemandaExtraTemporal"] = 0
+
+
+    estado["Pedidos por atender"] = nueva_demanda
+
+
+    # 3)  Pago de la nomina del mes actual
+
     total_nomina = estado["Total Salarios"]
-
 
     if estado["Caja disponible"] >= total_nomina:
         estado["Caja disponible"] -= total_nomina
     else:
+
         faltante = total_nomina - estado["Caja disponible"]
         estado["Caja disponible"] = 0
-        estado["Deuda pendiente"] += faltante * 1.12
+        estado["Deuda pendiente"] += (faltante * 1.12)
 
-    # 4. GESTIÓN DE CUENTAS POR PAGAR (Crédito Proveedores)
-    # ---------------------------------------------------------
-    # Recorremos la lista de facturas pendientes
+
+    # 4) Generacion de la nomina del proximo mes
+
     nuevas_cuentas = []
     deuda_a_pagar_hoy = 0
 
-    for factura in estado["CuentasPorPagar"]:
-        factura['turnos'] -= 1
-        if factura['turnos'] <= 0:
-            deuda_a_pagar_hoy += factura['monto']
-        else:
-            nuevas_cuentas.append(factura)
+    if "CuentasPorPagar" in estado:
+        for deuda in estado["CuentasPorPagar"]:
+            deuda["turnos"] -= 1
+            if deuda["turnos"] <= 0:
+                deuda_a_pagar_hoy += deuda["monto"]
+            else:
+                nuevas_cuentas.append(deuda)
 
-    estado["CuentasPorPagar"] = nuevas_cuentas
+        estado["CuentasPorPagar"] = nuevas_cuentas
 
     if deuda_a_pagar_hoy > 0:
         if estado["Caja disponible"] >= deuda_a_pagar_hoy:
@@ -203,74 +261,115 @@ def calcular_estado_final(estado):
         else:
             faltante = deuda_a_pagar_hoy - estado["Caja disponible"]
             estado["Caja disponible"] = 0
-            estado["Deuda pendiente"] += faltante * 1.12
-
-    # 5. PRODUCCIÓN AUTOMÁTICA (Turnos Extra)
-    # ---------------------------------------------------------
-
-    if estado["TurnosProduccionExtra"] > 0:
-
-        parts = estado["Maquinas (total/activas/averiadas)"].split("/")
-        activas = int(parts[1])
-        prod_base = estado["Produccion_por_maquina"] * estado["Mejorar_proceso"]
+            estado["Deuda pendiente"] += (faltante * 1.12)
 
 
-        extras = max(0, estado["Cantidad de empleados"] - 4)
-        prod_total_auto = (prod_base * activas) * (1 + 0.10 * extras)
+    # 5) Anular multas, accidentes, y demas cartas del caos
 
-        estado["Inventario"] += int(prod_total_auto)
-        estado["TurnosProduccionExtra"] -= 1
+    estado["Multas e indemnizaciones"] = 0
 
-    # 6. ACTUALIZACIÓN DE CONTADORES Y LIMPIEZA
-    # ---------------------------------------------------------
+    # 6) Produccion en automatico
 
+    if "TurnosProduccionExtra" in estado and estado["TurnosProduccionExtra"] > 0:
 
-    if estado["Pedidos_extra_prox_turno"] > 0:
-        estado["DemandaExtraTemporal"] = estado["Pedidos_extra_prox_turno"]
-        estado["Pedidos_extra_prox_turno"] = 0  # Ya se aplicó
-    else:
-
-        estado["DemandaExtraTemporal"] = 0
+        prod_base = estado["Produccion_por_maquina"]
 
 
-    campos_a_reducir = [
-        "TurnosMantenimiento", "TurnosIncentivos", "TurnosBranding",
-        "TurnosProteccionCompetidores", "TurnosProteccionEcommerce",
-        "TurnosVentaExcedentes", "Turnos_ventas_20porciento"
-    ]
+        empleados = estado["Cantidad de empleados"]
+        extras = empleados - 4
+        if extras < 0:
+            extras = 0
 
-    for campo in campos_a_reducir:
-        if estado(campo, 0) > 0:
-            estado[campo] -= 1
+        eficiencia_rrhh = 1 + (0.10 * extras)
 
 
-    if estado["TurnosIncentivos"] == 0: estado["IncentivosActivos"] = False
-    if estado["TurnosBranding"] == 0: estado["BrandingActivo"] = False
-    if estado["TurnosMantenimiento"] == 0: estado["MantenimientoHecho"] = False
-    if estado["Turnos_ventas_20porciento"] == 0: estado["Aumento_ventas_20porciento"] = False
+        mejora_proceso = estado["Mejorar_proceso"]
+
+
+        maquinas_str = estado["Maquinas (total/activas/averiadas)"]
+        partes = maquinas_str.split("/")
+        activas_str = partes[1]
+        maquinas_activas = int(activas_str)
+
+        produccion_total = (prod_base * maquinas_activas) * eficiencia_rrhh * mejora_proceso
+
+
+        estado["Inventario"] += int(produccion_total)
+
+
+
+    # 7)  Actualizacion de flags temporales y decremento de contadores
+
+
+    lista_contadores = [
+            "TurnosProduccionExtra",
+            "CampaniaTurnosRestantes",
+            "BrandingTurnosRestantes",
+            "TurnosMantenimiento",
+            "TurnosIncentivos",
+            "TurnosClimaLaboral",
+            "TurnosSeguridad",
+            "TurnosCalidadPremium",
+            "TurnosVentaExcedentes",
+            "Turnos_ventas_20porciento",
+            "BloqueoCaosDemanda",
+            "BloqueoCaosReputacion",
+            "ProteccionCompetidores",
+            "TurnosProteccionEcommerce",
+            "BloqueoHuelgas",
+            "BloqueoErroresManual",
+            "BloqueoFugaTalento",
+            "BloqueoAccidentes",
+            "BloqueoRobos",
+            "BloqueoVirus"
+        ]
+
+    for key in lista_contadores:
+        if key in estado and estado[key] > 0:
+            estado[key] -= 1
+
+
+    if "BrandingTurnosRestantes" in estado and estado["BrandingTurnosRestantes"] == 0:
+
+        estado["BrandingActivo"] = False
+
+
+        if "ReputacionOriginal" in estado:
+            estado["Reputacion del mercado"] = estado["ReputacionOriginal"]
+
+
+    if "TurnosIncentivos" in estado and estado["TurnosIncentivos"] == 0:
+        estado["IncentivosActivos"] = False
+
+    if "TurnosMantenimiento" in estado and estado["TurnosMantenimiento"] == 0:
+        estado["MantenimientoHecho"] = False
+
+    if "TurnosCalidadPremium" in estado and estado["TurnosCalidadPremium"] == 0:
+        estado["CalidadPremiumActiva"] = False
+
+    if "TurnosVentaExcedentes" in estado and estado["TurnosVentaExcedentes"] == 0:
+        estado["VentaExcedentesActiva"] = False
+
+    if "Turnos_ventas_20porciento" in estado and estado["Turnos_ventas_20porciento"] == 0:
+        estado["Aumento_ventas_20porciento"] = False
 
 
     estado["EmpleadosTemporales"] = 0
 
-    # 7. CADUCIDAD DE INSUMOS
-    # ---------------------------------------------------------
 
-    if estado["Prohibir Produccion"]:
+    # 8) Perdida de inventario:
+
+    if "Prohibir Produccion" in estado and estado["Prohibir Produccion"]:
         perdida = int(estado["Insumos disponibles"] * 0.10)
         estado["Insumos disponibles"] -= perdida
 
 
-    if estado["TurnosVentaExcedentes"] > 0:
-        cantidad_vender = int(estado["Insumos disponibles"] * 0.10)
-        ingreso = cantidad_vender * 0.30
-        estado["Insumos disponibles"] -= cantidad_vender
-        estado["Caja disponible"] += ingreso
-
     estado["InventarioMesAnterior"] = estado["Inventario"]
 
+    return estado
 
     # estado["pagos30"] = estado["pagos60"]
     # estado["pagos60"] = 0
     # estado["pagos60"] = estado["pagos90"]
     # estado["pagos90"] = 0
-    return estado
+

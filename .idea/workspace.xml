@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="661e0170-059b-4d93-996f-12a2e7edaa91" name="Changes" comment="mas cambios a  final project">
-      <change afterPath="$PROJECT_DIR$/gah/EC10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/stunning-doodad.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stunning-doodad.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PF/acciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/PF/acciones.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PF/estado.py" beforeDir="false" afterPath="$PROJECT_DIR$/PF/estado.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gah/EC9.py" beforeDir="false" afterPath="$PROJECT_DIR$/gah/EC9.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,38 +55,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.EC6.executor": "Run",
-    "Python.EC9.executor": "Run",
-    "Python.EG3.executor": "Debug",
-    "Python.EG4.executor": "Run",
-    "Python.TC3.executor": "Run",
-    "Python.Unnamed.executor": "Run",
-    "Python.acciones.executor": "Run",
-    "Python.dicc_ejercicio.executor": "Run",
-    "Python.estado.executor": "Run",
-    "Python.imagen_primer.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.sesion3.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ai.playground.ignore.import.keys.banner.in.settings": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/carlos/PycharmProjects/stunning-doodad/PF",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.EC6.executor&quot;: &quot;Run&quot;,
+    &quot;Python.EC9.executor&quot;: &quot;Run&quot;,
+    &quot;Python.EG3.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.EG4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TC3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.acciones.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dicc_ejercicio.executor&quot;: &quot;Run&quot;,
+    &quot;Python.estado.executor&quot;: &quot;Run&quot;,
+    &quot;Python.imagen_primer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sesion3.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/carlos/PycharmProjects/stunning-doodad/PF&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/PF" />
@@ -193,16 +192,16 @@
     <option name="LAST_COMMIT_MESSAGE" value="mas cambios a  final project" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/stunning_doodad$EG3.coverage" NAME="EG3 Coverage Results" MODIFIED="1770131337092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$main.coverage" NAME="main Coverage Results" MODIFIED="1771259244649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$EC9.coverage" NAME="EC9 Coverage Results" MODIFIED="1771262380765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$EG4.coverage" NAME="EG4 Coverage Results" MODIFIED="1770131329061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$estado.coverage" NAME="estado Coverage Results" MODIFIED="1771250712477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$dicc_ejercicio.coverage" NAME="dicc_ejercicio Coverage Results" MODIFIED="1770220117040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$sesion3.coverage" NAME="sesion3 Coverage Results" MODIFIED="1770130441776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$acciones.coverage" NAME="acciones Coverage Results" MODIFIED="1771258460035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
     <SUITE FILE_PATH="coverage/stunning_doodad$EC6.coverage" NAME="EC6 Coverage Results" MODIFIED="1770131317767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$EG3.coverage" NAME="EG3 Coverage Results" MODIFIED="1770131337092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$estado.coverage" NAME="estado Coverage Results" MODIFIED="1771250712477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$main.coverage" NAME="main Coverage Results" MODIFIED="1771292262146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
     <SUITE FILE_PATH="coverage/stunning_doodad$TC3.coverage" NAME="TC3 Coverage Results" MODIFIED="1770823322309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$EG4.coverage" NAME="EG4 Coverage Results" MODIFIED="1770131329061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$acciones.coverage" NAME="acciones Coverage Results" MODIFIED="1771258460035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$dicc_ejercicio.coverage" NAME="dicc_ejercicio Coverage Results" MODIFIED="1770220117040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$imagen_primer.coverage" NAME="imagen_primer Coverage Results" MODIFIED="1770138557810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$EC9.coverage" NAME="EC9 Coverage Results" MODIFIED="1771262380765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
   </component>
 </project>
