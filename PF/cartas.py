@@ -463,6 +463,12 @@ def aplicar_carta(numero, estado):
             estado["Produccion_por_maquina"] = int(estado["Produccion_por_maquina"] * 0.5)
             if estado["Cantidad de empleados"] > 0:
                 estado["Cantidad de empleados"] = estado["Cantidad de empleados"] - 1
+            if estado["Caja disponible"]>= 4000:
+                estado["Caja disponible"] -= 4000
+            else:
+                falta =4000 - estado["Caja disponible"]
+                estado["Deuda pendiente"] += falta * 1.12
+                estado["Caja disponible"] = 0
         return estado
 
     # Carta 38: Derrame quimico

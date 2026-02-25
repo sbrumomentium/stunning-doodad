@@ -246,7 +246,15 @@ def calcular_estado_final(estado):
 
 
     # 5) Anular multas, accidentes, y demas cartas del caos
+    total_multas = estado["Multas e indemnizaciones"]
 
+    if total_multas > 0:
+        if estado["Caja disponible"] >= total_multas:
+            estado["Caja disponible"] -= total_multas
+        else:
+            faltante = total_multas - estado["Caja disponible"]
+            estado["Caja disponible"] = 0
+            estado["Deuda pendiente"] += (faltante * 1.12)
     estado["Multas e indemnizaciones"] = 0
 
     # 6) Produccion en automatico
