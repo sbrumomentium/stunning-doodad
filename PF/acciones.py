@@ -55,7 +55,7 @@ def produccion_pedido_encargo(estado):
     - Si no hay suficientes insumos disponibles, no se puede producir por encargo.
     """
     puede_producir = True
-    maquinasactivas = estado["Maquinas (total/activas/averiadas)".split("/")][1]
+    maquinasactivas = (estado["Maquinas (total/activas/averiadas)".split("/")][1])
     if maquinasactivas >= 1:
         if "Prohibir Produccion" in estado and estado["Prohibir Produccion"]:
             puede_producir = False
@@ -157,6 +157,8 @@ def rh_contratar_personal_permanente(estado):
     - Si se vuelve a ejecutar esta accion, se aumentan 4,000 mas en salarios y 1 mas en numero de empleados.
     - Se puede seguir aumentnto el personal infinitas veces.
     """
+    if estado["StringFreeze_activo"]:
+        estado["Cantidad de empleados"] = False
     costo = 4000
     if estado["Caja disponible"] >= costo:
         estado["Caja disponible"] = estado["Caja disponible"] - costo
@@ -499,17 +501,19 @@ def marketing_abrir_ecommerce(estado):
     - Si no hay dinero, debes pedir un préstamo al 12% de interes
         • Es decir, te haces una deuda de S/ 22,400 o S/2,240 según corresponda
     """
-    if estado["Caja disponible"] >= 3000:
-        estado["Caja disponible"] = estado["Caja disponible"] - 3000
+    if not estado["EcommerceActivo"]:
+        costo = 20000
     else:
-        mefalta = 3000 - estado["Caja disponible"]
-    estado["Deuda pendiente"] = estado["Deuda pendiente"] + mefalta * 1.12
-    estado["Caja disponible"] = 0
-    estado["Aumento_ventas_20porciento"] = True
-    estado["Turnos_ventas_20porciento"] = 2
-    estado["Pedidos_extra_este_turno"] = estado["Pedidos_extra_este_turno"] + 300000
-    estado["Pedidos_extra_prox_turno"] = estado["Pedidos_extra_prox_turno"] + 300000
-    return estado
+        costo = 2000
+
+    if estado["Caja disponible"] >= costo:
+        estado["Caja disponible"] = estado["Caja disponible"] - costo
+    else:
+        mefalta = costo - estado["Caja disponible"]
+        estado["Deuda pendiente"] = estado["Deuda pendiente"] + (mefalta * 1.12)
+        estado["Caja disponible"] = 0
+
+    estado["EcommerceActivo"] = True
 
 
 def marketing_co_branding(estado):
@@ -530,12 +534,12 @@ def marketing_co_branding(estado):
         estado["Caja disponible"] = estado["Caja disponible"] - 3000
     else:
         mefalta = 3000 - estado["Caja disponible"]
-    estado["Deuda pendiente"] = estado["Deuda pendiente"] + mefalta * 1.12
-    estado["Caja disponible"] = 0
+        estado["Deuda pendiente"] = estado["Deuda pendiente"] + mefalta * 1.12
+        estado["Caja disponible"] = 0
     estado["Aumento_ventas_20porciento"] = True
     estado["Turnos_ventas_20porciento"] = 2
-    estado["Pedidos_extra_este_turno"] = estado["Pedidos_extra_este_turno"] + 300000
-    estado["Pedidos_extra_prox_turno"] = estado["Pedidos_extra_prox_turno"] + 300000
+    estado["DemandaExtraTemporal"] = estado["DemandaExtraTemporal"] + 300000
+    estado["Pedidos_extra_prox_turno"] = estado["Pedidos_extra_prox_turno"] + 100000
     return estado
 
 def marketing_no_hacer_nada(estado):

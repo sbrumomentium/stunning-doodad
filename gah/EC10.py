@@ -33,14 +33,31 @@ def pregunta_2(lista_paises:list[dict], pais_objetivo:str)->float:
     Retorna:
         (float) : el valor del crecimiento
     """
-    nombres_de_paises = []
-    for elem in lista_paises:
-        nombres_de_paises.append(elem['pais'])
-    nombres_ordenados = sorted(nombres_de_paises)
-    otralista = []
-    for elem in lista_paises:
-        otralista.append(elem)
-    return lista_paises
+    n = len(lista_paises)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if lista_paises[j]['pais'].lower() > lista_paises[j+1]['pais'].lower():
+                lista_paises[j], lista_paises[j+1] = lista_paises[j+1], lista_paises[j]
+
+
+    bajo = 0
+    alto = len(lista_paises) - 1
+    objetivo = pais_objetivo.lower()
+
+    while bajo <= alto:
+        medio = (bajo + alto) // 2
+
+        nombre_actual = lista_paises[medio]['pais'].lower()
+
+        if nombre_actual == objetivo:
+            return float(lista_paises[medio]['crecimiento'])
+        elif nombre_actual < objetivo:
+            bajo = medio + 1
+        else:
+            alto = medio - 1
+
+
+    return 0.0
 
 
 def pregunta_3(libros: list[dict]) -> list[str]:
@@ -68,4 +85,15 @@ def pregunta_4(lista: list[dict]) -> list[dict]:
     Retorna:
     	list[dict] : lista de diccionarios
     """
-    return None
+    n = len(lista)
+
+    for i in range(n):
+        for j in range(0, n - i - 1):
+
+            total_actual = lista[j]['oro'] + lista[j]['plata']
+            total_siguiente = lista[j + 1]['oro'] + lista[j + 1]['plata']
+
+            if total_actual < total_siguiente:
+
+                lista[j], lista[j + 1] = lista[j + 1], lista[j]
+    return lista

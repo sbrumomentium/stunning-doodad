@@ -6,7 +6,7 @@ def calcular_estado_inicial():
     """
     empleados = 4
     costo_emp = 2000
-    # precio_venta = 4.5
+
     return {
         # Indicadores financieros y operativos
         "Caja disponible":                  50000,
@@ -54,7 +54,7 @@ def calcular_estado_inicial():
         # Contadores de duracion (Turnos restantes)
         "TurnosMantenimiento":              0,
         "TurnosIncentivos":                 0,
-        "TurnosBranding":                   0,
+        "BrandingTurnosRestantes":          0,
         "TurnosProteccionCompetidores":     0,
         "TurnosProteccionEcommerce":        0,
         "TurnosVentaExcedentes":            0,
@@ -139,24 +139,15 @@ def calcular_estado_final(estado):
     # 1) Venta automatica
 
     precio_venta = 4.5
-
     demanda_actual = estado["Pedidos por atender"]
-
     factor_venta = 1.0
-
     if "Aumento_ventas_20porciento" in estado and estado["Aumento_ventas_20porciento"]:
         factor_venta += 0.20
-
     if "IncentivosActivos" in estado and estado["IncentivosActivos"]:
         factor_venta += 0.20
-
     if "CalidadPremiumActiva" in estado and estado["CalidadPremiumActiva"]:
         factor_venta += 0.20
-
-
     capacidad_venta_maxima = int(demanda_actual * factor_venta)
-
-
     inventario_actual = estado["Inventario"]
     ventas_reales = min(capacidad_venta_maxima, inventario_actual)
 
@@ -164,7 +155,6 @@ def calcular_estado_final(estado):
     estado["Unidades vendidas"] = ventas_reales
     estado["Inventario"] -= ventas_reales
     estado["Caja disponible"] += (ventas_reales * precio_venta)
-
 
     demanda_insatisfecha = capacidad_venta_maxima - ventas_reales
 
@@ -268,8 +258,6 @@ def calcular_estado_final(estado):
 
         empleados = estado["Cantidad de empleados"]
         extras = empleados - 4
-        if extras < 0:
-            extras = 0
 
         eficiencia_rrhh = 1 + (0.10 * extras)
 
@@ -281,6 +269,8 @@ def calcular_estado_final(estado):
         partes = maquinas_str.split("/")
         activas_str = partes[1]
         maquinas_activas = int(activas_str)
+        # if estado["IncentivosActivos"] :
+        #     estado[]
 
         produccion_total = (prod_base * maquinas_activas) * eficiencia_rrhh * mejora_proceso
 

@@ -174,7 +174,7 @@ def aplicar_carta(numero, estado):
             unidades_devueltas = estado["Unidades vendidas"] + estado["InventarioMesAnterior"]
             estado["Inventario"] = estado["Inventario"] + unidades_devueltas
 
-            dinero_a_devolver = unidades_devueltas * 4.5
+            dinero_a_devolver = unidades_devueltas
             if estado["Caja disponible"] >= dinero_a_devolver:
                 estado["Caja disponible"] = estado["Caja disponible"] - dinero_a_devolver
             else:
