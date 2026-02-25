@@ -39,6 +39,8 @@ def calcular_estado_inicial():
         "pagos90":                          0,
         "pagos60":                          0,
         "pagos30":                          0,
+        "Prohibir Contrataciones":          False,
+        "CrisisEconomicaActiva":            False,
         # Contadores y flags temporales
         "TurnosProduccionExtra":            0,
         "DemandaExtraTemporal":             0,
@@ -46,6 +48,8 @@ def calcular_estado_inicial():
         "IncentivosActivos":                False,
         "BrandingActivo":                   False,
         "Aumento_ventas_20porciento":       False,
+        "CalidadPremiumActiva":             False,
+        "VentaExcedentesActiva":            False,
 
         # Contadores de duracion (Turnos restantes)
         "TurnosMantenimiento":              0,
@@ -55,10 +59,18 @@ def calcular_estado_inicial():
         "TurnosProteccionEcommerce":        0,
         "TurnosVentaExcedentes":            0,
         "Turnos_ventas_20porciento":        0,
+        "CampaniaTurnosRestantes":          0,
         "Pedidos_extra_prox_turno":         0,
         "BloqueoCaosDemanda":               0,
         "BloqueoCaosReputacion":            0,
-        "Produccion_tercer_mes":            0
+        "TurnosCalidadPremium":             0,
+        "Produccion_tercer_mes":            0,
+        "BloqueoHuelgas":                   0,
+        "BloqueoErroresManual":             0,
+        "BloqueoFugaTalento":               0,
+        "BloqueoAccidentes":                0,
+        "BloqueoRobos":                     0,
+        "BloqueoVirus":                     0
     }
 
 def calcular_estado_final(estado):
@@ -128,9 +140,7 @@ def calcular_estado_final(estado):
 
     precio_venta = 4.5
 
-
     demanda_actual = estado["Pedidos por atender"]
-
 
     factor_venta = 1.0
 
@@ -210,7 +220,8 @@ def calcular_estado_final(estado):
     # 3)  Pago de la nomina del mes actual
 
     total_nomina = estado["Total Salarios"]
-
+    if estado["CrisisEconomicaActiva"]:
+        total_nomina = int(total_nomina * 1.10)
     if estado["Caja disponible"] >= total_nomina:
         estado["Caja disponible"] -= total_nomina
     else:
@@ -233,7 +244,7 @@ def calcular_estado_final(estado):
             else:
                 nuevas_cuentas.append(deuda)
 
-        estado["CuentasPorPagar"] = nuevas_cuentas
+    estado["CuentasPorPagar"] = nuevas_cuentas
 
     if deuda_a_pagar_hoy > 0:
         if estado["Caja disponible"] >= deuda_a_pagar_hoy:
@@ -308,6 +319,18 @@ def calcular_estado_final(estado):
         if key in estado and estado[key] > 0:
             estado[key] -= 1
 
+    if estado["BrandingTurnosRestantes"] == 0:
+        estado["BrandingActivo"] = False
+    if estado["TurnosIncentivos"] == 0:
+        estado["IncentivosActivos"] = False
+    if estado["TurnosMantenimiento"] == 0:
+        estado["MantenimientoHecho"] = False
+    if estado["TurnosCalidadPremium"] == 0:
+        estado["CalidadPremiumActiva"] = False
+    if estado["TurnosVentaExcedentes"] == 0:
+        estado["VentaExcedentesActiva"] = False
+    if estado["Turnos_ventas_20porciento"] == 0:
+        estado["Aumento_ventas_20porciento"] = False
 
     if "BrandingTurnosRestantes" in estado and estado["BrandingTurnosRestantes"] == 0:
 
@@ -336,6 +359,11 @@ def calcular_estado_final(estado):
 
     estado["EmpleadosTemporales"] = 0
 
+    estado["Prohibir Produccion"] = False
+    estado["Prohibir Compras"] = False
+    estado["Prohibir Importaciones"] = False
+    estado["Prohibir Contrataciones"] = False
+    estado["CrisisEconomicaActiva"] = False
 
     # 8) Perdida de inventario:
 

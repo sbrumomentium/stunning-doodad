@@ -301,7 +301,43 @@ def rh_subir_sueldos(estado):
           1.5%, el resto de veces.
     - Bloquea por 3 turnos las cartas del caos relacionadas a las huelgas, bajo rendimiento o fuga de talento.
     """
+    # Ver cuántas veces se ha ejecutado
+    if "VecesSubidaSueldos" in estado:
+        veces = estado["VecesSubidaSueldos"]
+    else:
+        veces = 0
+
+    if veces == 0:
+        porcentaje = 0.10
+    elif veces == 1:
+        porcentaje = 0.07
+    elif veces == 2:
+        porcentaje = 0.04
+    else:
+        porcentaje = 0.015
+
+    aumento = estado["Total Salarios"] * porcentaje
+    estado["Total Salarios"] += aumento
+
+    estado["VecesSubidaSueldos"] = veces + 1
+
+    # Bloqueos laborales
+    if "BloqueoHuelgas" in estado:
+        estado["BloqueoHuelgas"] += 3
+    else:
+        estado["BloqueoHuelgas"] = 3
+
+    if "BloqueoFugaTalento" in estado:
+        estado["BloqueoFugaTalento"] += 3
+    else:
+        estado["BloqueoFugaTalento"] = 3
+
+    if "BloqueoBajoRendimiento" in estado:
+        estado["BloqueoBajoRendimiento"] += 3
+    else:
+        estado["BloqueoBajoRendimiento"] = 3
     return estado
+
 
 def rh_no_hacer_nada(estado):
     """
