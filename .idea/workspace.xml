@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="661e0170-059b-4d93-996f-12a2e7edaa91" name="Changes" comment="clase 2-3">
-      <change afterPath="$PROJECT_DIR$/gah2-ep2/quisz.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gah2-ep2/sesion5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gah2-ep2/sesion-4.py" beforeDir="false" afterPath="$PROJECT_DIR$/gah2-ep2/sesion-4.py" afterDir="false" />
-    </list>
+    <list default="true" id="661e0170-059b-4d93-996f-12a2e7edaa91" name="Changes" comment="clase 3-1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -216,7 +211,7 @@
       <workItem from="1787023453688" duration="2897000" />
       <workItem from="1787237385730" duration="3984000" />
       <workItem from="1787536614222" duration="1291000" />
-      <workItem from="1787574594974" duration="3861000" />
+      <workItem from="1787574594974" duration="3919000" />
     </task>
     <task id="LOCAL-00001" summary="big change before upload in gradescope">
       <option name="closed" value="true" />
@@ -282,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787242809886</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="clase 3-1">
+      <option name="closed" value="true" />
+      <created>1787580159770</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1787580159770</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +313,8 @@
     <MESSAGE value="tarea" />
     <MESSAGE value="clase 2-2" />
     <MESSAGE value="clase 2-3" />
-    <option name="LAST_COMMIT_MESSAGE" value="clase 2-3" />
+    <MESSAGE value="clase 3-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="clase 3-1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/stunning_doodad$estado.coverage" NAME="estado Coverage Results" MODIFIED="1772034318954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
