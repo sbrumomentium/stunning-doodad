@@ -35,7 +35,7 @@ numinput = int(input("Ingrese un numero que sea par o impar: "))
 respuesta = par_impar(numinput)
 print(respuesta)
 
-def par_impar_zero (nume)
+def par_impar_zero (nume):
     if nume > 0:
         return "El numero es par"
     elif nume < 0:
