@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="661e0170-059b-4d93-996f-12a2e7edaa91" name="Changes" comment="tarea">
-      <change beforePath="$PROJECT_DIR$/.idea/stunning-doodad.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stunning-doodad.iml" afterDir="false" />
+    <list default="true" id="661e0170-059b-4d93-996f-12a2e7edaa91" name="Changes" comment="tarea echa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gah2-ep2/tarea.py" beforeDir="false" afterPath="$PROJECT_DIR$/gah2-ep2/tarea.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,61 +42,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000777930070386" />
-      <entry key="MS500" value="1.1507259784621784" />
-      <entry key="S2" value="1.6240841929256047" />
-      <entry key="S5" value="1.9250047006945519" />
-      <entry key="S10" value="2.5643139557295216" />
-      <entry key="S30" value="6.389387440395317" />
-      <entry key="S60" value="11.761044729370045" />
-      <entry key="M2" value="20.144401050293073" />
-      <entry key="M5" value="33.11184594411859" />
-      <entry key="M10" value="40.89814611527385" />
-      <entry key="M15" value="44.41745721766605" />
-      <entry key="M30" value="49.01927826761077" />
-      <entry key="H1" value="52.073476520459096" />
-      <entry key="H2" value="53.902065430476625" />
-      <entry key="H4" value="54.913430668055604" />
-      <entry key="D1" value="55.81330780351429" />
-      <entry key="W1" value="55.973187418887214" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="3.394939174608182E-226" />
+      <entry key="S2" value="6.968346854464041E-57" />
+      <entry key="S5" value="5.206551541069869E-23" />
+      <entry key="S10" value="1.025468963228119E-11" />
+      <entry key="S30" value="5.223157487377427E-4" />
+      <entry key="S60" value="0.08833200837544136" />
+      <entry key="M2" value="1.6927938761298489" />
+      <entry key="M5" value="12.441888786786018" />
+      <entry key="M10" value="25.504943268871685" />
+      <entry key="M15" value="32.811357895932" />
+      <entry key="M30" value="42.88894283277051" />
+      <entry key="H1" value="49.576197100693406" />
+      <entry key="H2" value="53.526379083272595" />
+      <entry key="H4" value="55.69082014823468" />
+      <entry key="D1" value="57.60441823079336" />
+      <entry key="W1" value="57.94321653897587" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.0" />
+      <entry key="M10" value="1.0" />
+      <entry key="M15" value="1.0" />
+      <entry key="M30" value="1.0" />
+      <entry key="H1" value="1.0" />
+      <entry key="H2" value="1.0" />
+      <entry key="H4" value="1.0" />
+      <entry key="D1" value="1.0" />
+      <entry key="W1" value="1.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="8.305309882231911E-5" />
-      <entry key="MS500" value="0.21311360523114087" />
-      <entry key="S2" value="1.1219405159996714" />
-      <entry key="S5" value="1.6744956890111329" />
-      <entry key="S10" value="2.417673635306558" />
-      <entry key="S30" value="6.313238496895401" />
-      <entry key="S60" value="11.701582885924488" />
-      <entry key="M2" value="20.096467118049013" />
-      <entry key="M5" value="33.081474739626145" />
-      <entry key="M10" value="40.87968188478504" />
-      <entry key="M15" value="44.404183694724374" />
-      <entry key="M30" value="49.012026950367755" />
-      <entry key="H1" value="52.06965165237244" />
-      <entry key="H2" value="53.900094105055736" />
-      <entry key="H4" value="54.91242881985078" />
-      <entry key="D1" value="55.8131384374815" />
-      <entry key="W1" value="55.97316316316149" />
+      <entry key="MS100" value="7.308829984246393E-5" />
+      <entry key="MS500" value="0.148857106170621" />
+      <entry key="S2" value="0.6211441408922197" />
+      <entry key="S5" value="0.8265648964375699" />
+      <entry key="S10" value="0.9091561452553764" />
+      <entry key="S30" value="0.9692689846874744" />
+      <entry key="S60" value="1.0721298253933143" />
+      <entry key="M2" value="2.6807925181951555" />
+      <entry key="M5" value="13.42717793639978" />
+      <entry key="M10" value="26.491733638686078" />
+      <entry key="M15" value="33.80040795057437" />
+      <entry key="M30" value="43.88201650617763" />
+      <entry key="H1" value="50.572261763141704" />
+      <entry key="H2" value="54.52427370376477" />
+      <entry key="H4" value="56.68972999409444" />
+      <entry key="D1" value="58.604231042952144" />
+      <entry key="W1" value="58.94318965920079" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -151,7 +149,7 @@
     "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -208,7 +206,8 @@
       <workItem from="1786631787333" duration="3868000" />
       <workItem from="1786800705077" duration="1248000" />
       <workItem from="1786836011300" duration="333000" />
-      <workItem from="1787023453688" duration="2897000" />
+      <workItem from="1787023453688" duration="2922000" />
+      <workItem from="1788044172333" duration="1136000" />
     </task>
     <task id="LOCAL-00001" summary="big change before upload in gradescope">
       <option name="closed" value="true" />
@@ -258,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787023873198</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="tarea echa">
+      <option name="closed" value="true" />
+      <created>1787026554772</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1787026554772</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +291,8 @@
     <MESSAGE value="quick aa" />
     <MESSAGE value="slow aa" />
     <MESSAGE value="tarea" />
-    <option name="LAST_COMMIT_MESSAGE" value="tarea" />
+    <MESSAGE value="tarea echa" />
+    <option name="LAST_COMMIT_MESSAGE" value="tarea echa" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/stunning_doodad$estado.coverage" NAME="estado Coverage Results" MODIFIED="1772034318954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
