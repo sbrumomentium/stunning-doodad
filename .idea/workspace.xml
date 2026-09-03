@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="661e0170-059b-4d93-996f-12a2e7edaa91" name="Changes" comment="lab echo">
-      <change beforePath="$PROJECT_DIR$/.idea/stunning-doodad.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stunning-doodad.iml" afterDir="false" />
+    <list default="true" id="661e0170-059b-4d93-996f-12a2e7edaa91" name="Changes" comment="todolistso">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gah2-ep2/tarea1_solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/gah2-ep2/tarea1_solution.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,61 +43,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000002530252" />
-      <entry key="MS500" value="1.0120401735681002" />
-      <entry key="S2" value="1.3312517542613018" />
-      <entry key="S5" value="1.6427813608660706" />
-      <entry key="S10" value="1.8017364659700035" />
-      <entry key="S30" value="1.9289889451313869" />
-      <entry key="S60" value="1.963914995364425" />
-      <entry key="M2" value="2.030839082794646" />
-      <entry key="M5" value="5.011395161384538" />
-      <entry key="M10" value="14.559331478770249" />
-      <entry key="M15" value="22.462168999147604" />
-      <entry key="M30" value="35.87032501786044" />
-      <entry key="H1" value="46.056707499457815" />
-      <entry key="H2" value="52.45888653967429" />
-      <entry key="H4" value="56.07152278229433" />
-      <entry key="D1" value="59.32181999191598" />
-      <entry key="W1" value="59.90252231734758" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.00000003782746" />
+      <entry key="S2" value="1.0284819791406863" />
+      <entry key="S5" value="1.7518843728529179" />
+      <entry key="S10" value="3.410810557236097" />
+      <entry key="S30" value="6.343854114598276" />
+      <entry key="S60" value="7.535536380962018" />
+      <entry key="M2" value="8.27399710576162" />
+      <entry key="M5" value="11.573201804458595" />
+      <entry key="M10" value="21.13348912231933" />
+      <entry key="M15" value="29.064030669855565" />
+      <entry key="M30" value="42.574135295165256" />
+      <entry key="H1" value="52.87165847264172" />
+      <entry key="H2" value="59.354738990953194" />
+      <entry key="H4" value="63.01616823684508" />
+      <entry key="D1" value="66.3121021494097" />
+      <entry key="W1" value="66.90112149285387" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="5.505268105700814E-93" />
-      <entry key="S5" value="1.2482782101254547E-37" />
-      <entry key="S10" value="3.533098088258313E-19" />
-      <entry key="S30" value="7.069443560347607E-7" />
-      <entry key="S60" value="8.407998311338799E-4" />
-      <entry key="M2" value="0.028996548607271858" />
-      <entry key="M5" value="0.24262666190073415" />
-      <entry key="M10" value="0.49257147897613207" />
-      <entry key="M15" value="0.623705405111967" />
-      <entry key="M30" value="0.7897502169116302" />
-      <entry key="H1" value="0.8886789166575464" />
-      <entry key="H2" value="0.9426976804137933" />
-      <entry key="H4" value="0.970926197202338" />
-      <entry key="D1" value="0.9950946008650772" />
-      <entry key="W1" value="0.9992977509642545" />
+      <entry key="S2" value="8.317195300953088E-96" />
+      <entry key="S5" value="9.289466220024846E-39" />
+      <entry key="S10" value="9.638187703103132E-20" />
+      <entry key="S30" value="4.5849203274743705E-7" />
+      <entry key="S60" value="6.771203975272323E-4" />
+      <entry key="M2" value="0.026021537186093208" />
+      <entry key="M5" value="0.23234491884761557" />
+      <entry key="M10" value="0.4820216995609385" />
+      <entry key="M15" value="0.6147677258422257" />
+      <entry key="M30" value="0.7840712504882611" />
+      <entry key="H1" value="0.8854779785450689" />
+      <entry key="H2" value="0.9409983945496766" />
+      <entry key="H4" value="0.9700507175141289" />
+      <entry key="D1" value="0.9949449992778286" />
+      <entry key="W1" value="0.9992762876549" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9659363291692518" />
-      <entry key="MS500" value="1.0050495014512755" />
-      <entry key="S2" value="1.3289468683693098" />
-      <entry key="S5" value="1.6416430661459727" />
-      <entry key="S10" value="1.8011121398879688" />
-      <entry key="S30" value="1.9287667973115457" />
-      <entry key="S60" value="1.964628739790423" />
-      <entry key="M2" value="2.0594303989726153" />
-      <entry key="M5" value="5.250429558770229" />
-      <entry key="M10" value="15.045384739483687" />
-      <entry key="M15" value="23.079037171977053" />
-      <entry key="M30" value="36.65460131839123" />
-      <entry key="H1" value="46.94188723978607" />
-      <entry key="H2" value="53.39959852115318" />
-      <entry key="H4" value="57.041390038967705" />
-      <entry key="D1" value="60.31672824294659" />
-      <entry key="W1" value="60.90179319595231" />
+      <entry key="MS100" value="0.0018097423083796302" />
+      <entry key="MS500" value="0.2828286407395122" />
+      <entry key="S2" value="0.7545378072323335" />
+      <entry key="S5" value="1.6025412218965729" />
+      <entry key="S10" value="3.3037818351815353" />
+      <entry key="S30" value="6.2910877728377415" />
+      <entry key="S60" value="7.506513981701726" />
+      <entry key="M2" value="8.283914180273493" />
+      <entry key="M5" value="11.79556695786732" />
+      <entry key="M10" value="21.605820253581786" />
+      <entry key="M15" value="29.669841700829735" />
+      <entry key="M30" value="43.35165850735366" />
+      <entry key="H1" value="53.75309194005516" />
+      <entry key="H2" value="60.29347599686779" />
+      <entry key="H4" value="63.98502125909107" />
+      <entry key="D1" value="67.3068375315086" />
+      <entry key="W1" value="67.90036758056235" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -111,49 +112,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.1berjecicio.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EC2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EC6.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EC9.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EG3.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.EG4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TC3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Python.acciones.executor&quot;: &quot;Run&quot;,
-    &quot;Python.dicc_ejercicio.executor&quot;: &quot;Run&quot;,
-    &quot;Python.estado.executor&quot;: &quot;Run&quot;,
-    &quot;Python.imagen_primer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.kain.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sesion3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tarea.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kenny/PycharmProjects/stunning-doodad&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.1berjecicio.executor": "Run",
+    "Python.EC2.executor": "Run",
+    "Python.EC6.executor": "Run",
+    "Python.EC9.executor": "Run",
+    "Python.EG3.executor": "Debug",
+    "Python.EG4.executor": "Run",
+    "Python.TC3.executor": "Run",
+    "Python.Unnamed.executor": "Run",
+    "Python.acciones.executor": "Run",
+    "Python.dicc_ejercicio.executor": "Run",
+    "Python.estado.executor": "Run",
+    "Python.imagen_primer.executor": "Run",
+    "Python.kain.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.sesion3.executor": "Run",
+    "Python.tarea.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/kenny/PycharmProjects/stunning-doodad",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Errors",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/PF" />
@@ -208,6 +209,8 @@
       <workItem from="1786836011300" duration="333000" />
       <workItem from="1787023453688" duration="2922000" />
       <workItem from="1788044172333" duration="1900000" />
+      <workItem from="1788396247660" duration="175000" />
+      <workItem from="1788400413694" duration="947000" />
     </task>
     <task id="LOCAL-00001" summary="big change before upload in gradescope">
       <option name="closed" value="true" />
@@ -273,7 +276,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788045339862</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="todolistso">
+      <option name="closed" value="true" />
+      <created>1788396405381</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1788396405381</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +312,8 @@
     <MESSAGE value="tarea" />
     <MESSAGE value="tarea echa" />
     <MESSAGE value="lab echo" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab echo" />
+    <MESSAGE value="todolistso" />
+    <option name="LAST_COMMIT_MESSAGE" value="todolistso" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/stunning_doodad$estado.coverage" NAME="estado Coverage Results" MODIFIED="1772034318954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
