@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="661e0170-059b-4d93-996f-12a2e7edaa91" name="Changes" comment="todolistso">
+    <list default="true" id="661e0170-059b-4d93-996f-12a2e7edaa91" name="Changes" comment="tarea lab 1">
+      <change afterPath="$PROJECT_DIR$/gah2-ep2/labor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gah2-ep2/teoria_for.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/stunning-doodad.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stunning-doodad.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gah2-ep2/tarea1_solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/gah2-ep2/tarea1_solution.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +37,12 @@
     &quot;assignee&quot;: &quot;sbrumomentium&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/sbrumomentium/stunning-doodad.git&quot;,
-    &quot;accountId&quot;: &quot;e8b2456a-2b1b-4397-8ba7-7b0d85722579&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/sbrumomentium/stunning-doodad.git",
+    "accountId": "848ce496-8b51-4cb5-8472-4861f09e5529"
   }
-}</component>
+}]]></component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
@@ -128,9 +130,11 @@
     "Python.estado.executor": "Run",
     "Python.imagen_primer.executor": "Run",
     "Python.kain.executor": "Run",
+    "Python.labor.executor": "Run",
     "Python.main.executor": "Run",
     "Python.sesion3.executor": "Run",
     "Python.tarea.executor": "Run",
+    "Python.teoria_for.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -170,7 +174,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-821f704e66d9-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.9437.214" />
+        <option value="bundled-python-sdk-6fa658e1df1a-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.8665.369" />
       </set>
     </attachedChunks>
   </component>
@@ -211,6 +215,7 @@
       <workItem from="1788044172333" duration="1900000" />
       <workItem from="1788396247660" duration="175000" />
       <workItem from="1788400413694" duration="947000" />
+      <workItem from="1788875831544" duration="6178000" />
     </task>
     <task id="LOCAL-00001" summary="big change before upload in gradescope">
       <option name="closed" value="true" />
@@ -317,19 +322,21 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/stunning_doodad$estado.coverage" NAME="estado Coverage Results" MODIFIED="1772034318954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$EG4.coverage" NAME="EG4 Coverage Results" MODIFIED="1770131329061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$EC9.coverage" NAME="EC9 Coverage Results" MODIFIED="1771262380765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$acciones.coverage" NAME="acciones Coverage Results" MODIFIED="1771258460035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$kain.coverage" NAME="kain Coverage Results" MODIFIED="1786634431632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$tarea.coverage" NAME="tarea Coverage Results" MODIFIED="1787026513327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$EG3.coverage" NAME="EG3 Coverage Results" MODIFIED="1770131337092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$sesion3.coverage" NAME="sesion3 Coverage Results" MODIFIED="1770130441776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$1berjecicio.coverage" NAME="1berjecicio Coverage Results" MODIFIED="1786635672513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$imagen_primer.coverage" NAME="imagen_primer Coverage Results" MODIFIED="1770138557810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$EC2.coverage" NAME="EC2 Coverage Results" MODIFIED="1786579884540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$tarea.coverage" NAME="tarea Coverage Results" MODIFIED="1787026513327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$kain.coverage" NAME="kain Coverage Results" MODIFIED="1786634431632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$dicc_ejercicio.coverage" NAME="dicc_ejercicio Coverage Results" MODIFIED="1770220117040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$main.coverage" NAME="main Coverage Results" MODIFIED="1772035112830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$labor.coverage" NAME="labor Coverage Results" MODIFIED="1788882250446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$acciones.coverage" NAME="acciones Coverage Results" MODIFIED="1771258460035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$imagen_primer.coverage" NAME="imagen_primer Coverage Results" MODIFIED="1770138557810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$sesion3.coverage" NAME="sesion3 Coverage Results" MODIFIED="1770130441776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$EC9.coverage" NAME="EC9 Coverage Results" MODIFIED="1771262380765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$EG4.coverage" NAME="EG4 Coverage Results" MODIFIED="1788880559074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$1berjecicio.coverage" NAME="1berjecicio Coverage Results" MODIFIED="1786635672513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$EC2.coverage" NAME="EC2 Coverage Results" MODIFIED="1786579884540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$EC6.coverage" NAME="EC6 Coverage Results" MODIFIED="1770131317767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$TC3.coverage" NAME="TC3 Coverage Results" MODIFIED="1770823322309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$main.coverage" NAME="main Coverage Results" MODIFIED="1772035112830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$teoria_for.coverage" NAME="teoria_for Coverage Results" MODIFIED="1788785875472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
   </component>
 </project>
