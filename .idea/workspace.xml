@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="661e0170-059b-4d93-996f-12a2e7edaa91" name="Changes" comment="tarea lab 1">
-      <change afterPath="$PROJECT_DIR$/gah2-ep2/labor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gah2-ep2/teoria_for.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gah2-ep2/4aEjem6.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gah2-ep2/solution-1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gah2-ep2/tarea_lab_3_solution.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/stunning-doodad.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stunning-doodad.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -40,66 +41,66 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/sbrumomentium/stunning-doodad.git",
-    "accountId": "848ce496-8b51-4cb5-8472-4861f09e5529"
+    "accountId": "e8b2456a-2b1b-4397-8ba7-7b0d85722579"
   }
 }]]></component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.00000003782746" />
-      <entry key="S2" value="1.0284819791406863" />
-      <entry key="S5" value="1.7518843728529179" />
-      <entry key="S10" value="3.410810557236097" />
-      <entry key="S30" value="6.343854114598276" />
-      <entry key="S60" value="7.535536380962018" />
-      <entry key="M2" value="8.27399710576162" />
-      <entry key="M5" value="11.573201804458595" />
-      <entry key="M10" value="21.13348912231933" />
-      <entry key="M15" value="29.064030669855565" />
-      <entry key="M30" value="42.574135295165256" />
-      <entry key="H1" value="52.87165847264172" />
-      <entry key="H2" value="59.354738990953194" />
-      <entry key="H4" value="63.01616823684508" />
-      <entry key="D1" value="66.3121021494097" />
-      <entry key="W1" value="66.90112149285387" />
+      <entry key="MS100" value="1.0000000028646026" />
+      <entry key="MS500" value="1.024109065329549" />
+      <entry key="S2" value="1.6692628192024765" />
+      <entry key="S5" value="3.2899862810777796" />
+      <entry key="S10" value="6.2297596625603635" />
+      <entry key="S30" value="12.558486164781975" />
+      <entry key="S60" value="15.688865484152883" />
+      <entry key="M2" value="17.947367344189512" />
+      <entry key="M5" value="22.25456941307561" />
+      <entry key="M10" value="30.796806007578066" />
+      <entry key="M15" value="38.92757994569639" />
+      <entry key="M30" value="54.93147515680703" />
+      <entry key="H1" value="68.60764912311535" />
+      <entry key="H2" value="77.75441968043127" />
+      <entry key="H4" value="83.08166646091452" />
+      <entry key="D1" value="87.96933209594634" />
+      <entry key="W1" value="88.851632034819" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="8.317195300953088E-96" />
-      <entry key="S5" value="9.289466220024846E-39" />
-      <entry key="S10" value="9.638187703103132E-20" />
-      <entry key="S30" value="4.5849203274743705E-7" />
-      <entry key="S60" value="6.771203975272323E-4" />
-      <entry key="M2" value="0.026021537186093208" />
-      <entry key="M5" value="0.23234491884761557" />
-      <entry key="M10" value="0.4820216995609385" />
-      <entry key="M15" value="0.6147677258422257" />
-      <entry key="M30" value="0.7840712504882611" />
-      <entry key="H1" value="0.8854779785450689" />
-      <entry key="H2" value="0.9409983945496766" />
-      <entry key="H4" value="0.9700507175141289" />
-      <entry key="D1" value="0.9949449992778286" />
-      <entry key="W1" value="0.9992762876549" />
+      <entry key="S2" value="1.3630936926629438E-92" />
+      <entry key="S5" value="1.7939497886440335E-37" />
+      <entry key="S10" value="4.235504442972564E-19" />
+      <entry key="S30" value="7.509918160810392E-7" />
+      <entry key="S60" value="8.671188926211887E-4" />
+      <entry key="M2" value="0.03015997963057114" />
+      <entry key="M5" value="0.2994839111351259" />
+      <entry key="M10" value="0.7294053120831856" />
+      <entry key="M15" value="1.0061468340166555" />
+      <entry key="M30" value="1.407946833800517" />
+      <entry key="H1" value="1.674875105305867" />
+      <entry key="H2" value="1.829359659645519" />
+      <entry key="H4" value="1.9125496802038664" />
+      <entry key="D1" value="1.9851191768563845" />
+      <entry key="W1" value="1.9978665469057661" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0018097423083796302" />
-      <entry key="MS500" value="0.2828286407395122" />
-      <entry key="S2" value="0.7545378072323335" />
-      <entry key="S5" value="1.6025412218965729" />
-      <entry key="S10" value="3.3037818351815353" />
-      <entry key="S30" value="6.2910877728377415" />
-      <entry key="S60" value="7.506513981701726" />
-      <entry key="M2" value="8.283914180273493" />
-      <entry key="M5" value="11.79556695786732" />
-      <entry key="M10" value="21.605820253581786" />
-      <entry key="M15" value="29.669841700829735" />
-      <entry key="M30" value="43.35165850735366" />
-      <entry key="H1" value="53.75309194005516" />
-      <entry key="H2" value="60.29347599686779" />
-      <entry key="H4" value="63.98502125909107" />
-      <entry key="D1" value="67.3068375315086" />
-      <entry key="W1" value="67.90036758056235" />
+      <entry key="MS100" value="0.9265880618925514" />
+      <entry key="MS500" value="0.9919450354403194" />
+      <entry key="S2" value="1.5126891101217332" />
+      <entry key="S5" value="3.1271636874331006" />
+      <entry key="S10" value="6.0755536198942535" />
+      <entry key="S30" value="12.452641013828547" />
+      <entry key="S60" value="15.622717199524404" />
+      <entry key="M2" value="17.93791116308831" />
+      <entry key="M5" value="22.531190505009135" />
+      <entry key="M10" value="31.508918296257" />
+      <entry key="M15" value="39.91901357880506" />
+      <entry key="M30" value="56.32919503013492" />
+      <entry key="H1" value="70.27625464166233" />
+      <entry key="H2" value="79.58026929679649" />
+      <entry key="H4" value="84.99235348636496" />
+      <entry key="D1" value="89.95412452593573" />
+      <entry key="W1" value="90.84945148523155" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -134,6 +135,7 @@
     "Python.main.executor": "Run",
     "Python.sesion3.executor": "Run",
     "Python.tarea.executor": "Run",
+    "Python.tarea_lab_3_solution.executor": "Run",
     "Python.teoria_for.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -146,7 +148,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/kenny/PycharmProjects/stunning-doodad",
+    "last_opened_file_path": "C:/Users/kenny/PycharmProjects/stunning-doodad/gah2-ep2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
@@ -161,6 +163,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kenny\PycharmProjects\stunning-doodad\gah2-ep2" />
       <recent name="$PROJECT_DIR$/PF" />
       <recent name="C:\Users\carlos\PycharmProjects\stunning-doodad\plantillas" />
       <recent name="C:\Users\carlos\PycharmProjects\stunning-doodad\gah" />
@@ -174,7 +177,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-6fa658e1df1a-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.8665.369" />
+        <option value="bundled-python-sdk-821f704e66d9-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.9437.214" />
       </set>
     </attachedChunks>
   </component>
@@ -216,6 +219,7 @@
       <workItem from="1788396247660" duration="175000" />
       <workItem from="1788400413694" duration="947000" />
       <workItem from="1788875831544" duration="6178000" />
+      <workItem from="1789138995368" duration="3423000" />
     </task>
     <task id="LOCAL-00001" summary="big change before upload in gradescope">
       <option name="closed" value="true" />
@@ -322,21 +326,22 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/stunning_doodad$estado.coverage" NAME="estado Coverage Results" MODIFIED="1772034318954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$EG3.coverage" NAME="EG3 Coverage Results" MODIFIED="1770131337092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$tarea.coverage" NAME="tarea Coverage Results" MODIFIED="1787026513327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$EG4.coverage" NAME="EG4 Coverage Results" MODIFIED="1788880559074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$EC9.coverage" NAME="EC9 Coverage Results" MODIFIED="1771262380765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$kain.coverage" NAME="kain Coverage Results" MODIFIED="1786634431632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$dicc_ejercicio.coverage" NAME="dicc_ejercicio Coverage Results" MODIFIED="1770220117040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$main.coverage" NAME="main Coverage Results" MODIFIED="1772035112830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
     <SUITE FILE_PATH="coverage/stunning_doodad$labor.coverage" NAME="labor Coverage Results" MODIFIED="1788882250446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$acciones.coverage" NAME="acciones Coverage Results" MODIFIED="1771258460035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$imagen_primer.coverage" NAME="imagen_primer Coverage Results" MODIFIED="1770138557810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$tarea_lab_3_solution.coverage" NAME="tarea_lab_3_solution Coverage Results" MODIFIED="1789139633089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$tarea.coverage" NAME="tarea Coverage Results" MODIFIED="1787026513327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$EG3.coverage" NAME="EG3 Coverage Results" MODIFIED="1770131337092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$teoria_for.coverage" NAME="teoria_for Coverage Results" MODIFIED="1788785875472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$sesion3.coverage" NAME="sesion3 Coverage Results" MODIFIED="1770130441776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$EC9.coverage" NAME="EC9 Coverage Results" MODIFIED="1771262380765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$EG4.coverage" NAME="EG4 Coverage Results" MODIFIED="1788880559074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$1berjecicio.coverage" NAME="1berjecicio Coverage Results" MODIFIED="1786635672513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$imagen_primer.coverage" NAME="imagen_primer Coverage Results" MODIFIED="1770138557810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$EC2.coverage" NAME="EC2 Coverage Results" MODIFIED="1786579884540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$dicc_ejercicio.coverage" NAME="dicc_ejercicio Coverage Results" MODIFIED="1770220117040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$EC6.coverage" NAME="EC6 Coverage Results" MODIFIED="1770131317767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$TC3.coverage" NAME="TC3 Coverage Results" MODIFIED="1770823322309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
-    <SUITE FILE_PATH="coverage/stunning_doodad$teoria_for.coverage" NAME="teoria_for Coverage Results" MODIFIED="1788785875472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$main.coverage" NAME="main Coverage Results" MODIFIED="1772035112830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
   </component>
 </project>
