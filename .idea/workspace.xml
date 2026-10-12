@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="661e0170-059b-4d93-996f-12a2e7edaa91" name="Changes" comment="nuevo dia">
+    <list default="true" id="661e0170-059b-4d93-996f-12a2e7edaa91" name="Changes" comment="modulos y funciones">
+      <change afterPath="$PROJECT_DIR$/gah2-ep2/sesion10-1machupicchu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gah2-ep2/sesion10-1matplotlib.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gah2-ep2/sesion10-1numpy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gah2-ep2/sesion10-1peru.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gah2-ep2/sesion7-1_string.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/stunning-doodad.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stunning-doodad.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -112,60 +117,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.1berjecicio.executor&quot;: &quot;Run&quot;,
-    &quot;Python.6-2 tablas.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EC2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EC6.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EC9.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EG3.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.EG4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TC3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Python.acciones.executor&quot;: &quot;Run&quot;,
-    &quot;Python.dicc_ejercicio.executor&quot;: &quot;Run&quot;,
-    &quot;Python.estado.executor&quot;: &quot;Run&quot;,
-    &quot;Python.imagen_primer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.kain.executor&quot;: &quot;Run&quot;,
-    &quot;Python.labor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_ejercicio2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sesion3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sesion6-2_bucles-anidados.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sesion6-2_grok.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sesion6-3_local.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sesion6-3_modulos.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sesion6-3_var-local.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tarea.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tarea_lab_3_solution.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tarea_lab_4_solution.executor&quot;: &quot;Run&quot;,
-    &quot;Python.teoria_for.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kenny/PycharmProjects/stunning-doodad/gah2-ep2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.1berjecicio.executor": "Run",
+    "Python.6-2 tablas.executor": "Run",
+    "Python.EC2.executor": "Run",
+    "Python.EC6.executor": "Run",
+    "Python.EC9.executor": "Run",
+    "Python.EG3.executor": "Debug",
+    "Python.EG4.executor": "Run",
+    "Python.TC3.executor": "Run",
+    "Python.Unnamed.executor": "Run",
+    "Python.acciones.executor": "Run",
+    "Python.dicc_ejercicio.executor": "Run",
+    "Python.estado.executor": "Run",
+    "Python.imagen_primer.executor": "Run",
+    "Python.kain.executor": "Run",
+    "Python.labor.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main_ejercicio2.executor": "Run",
+    "Python.sesion10-1machupicchu.executor": "Run",
+    "Python.sesion10-1numpy.executor": "Run",
+    "Python.sesion10-1peru.executor": "Run",
+    "Python.sesion10-2matplotlib.executor": "Run",
+    "Python.sesion3.executor": "Run",
+    "Python.sesion6-2_bucles-anidados.executor": "Run",
+    "Python.sesion6-2_grok.executor": "Run",
+    "Python.sesion6-2_tablas.executor": "Run",
+    "Python.sesion6-3_local.executor": "Run",
+    "Python.sesion6-3_modulos.executor": "Run",
+    "Python.sesion6-3_var-local.executor": "Run",
+    "Python.sesion7-1_string.executor": "Run",
+    "Python.tarea.executor": "Run",
+    "Python.tarea_lab_3_solution.executor": "Run",
+    "Python.tarea_lab_4_solution.executor": "Run",
+    "Python.teoria_for.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/kenny/PycharmProjects/stunning-doodad/gah2-ep2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kenny\PycharmProjects\stunning-doodad\gah2-ep2" />
@@ -226,6 +237,10 @@
       <workItem from="1788875831544" duration="6178000" />
       <workItem from="1789138995368" duration="3423000" />
       <workItem from="1789654674873" duration="4512000" />
+      <workItem from="1789999416331" duration="4722000" />
+      <workItem from="1790258584981" duration="81000" />
+      <workItem from="1790599160904" duration="897000" />
+      <workItem from="1791806520800" duration="5396000" />
     </task>
     <task id="LOCAL-00001" summary="big change before upload in gradescope">
       <option name="closed" value="true" />
@@ -342,16 +357,21 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/stunning_doodad$EG3.coverage" NAME="EG3 Coverage Results" MODIFIED="1770131337092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$sesion6_2_grok.coverage" NAME="sesion6-2_grok Coverage Results" MODIFIED="1789483575889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$sesion6_2_tablas.coverage" NAME="sesion6-2_tablas Coverage Results" MODIFIED="1790001275386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$sesion6_3_modulos.coverage" NAME="sesion6-3_modulos Coverage Results" MODIFIED="1789659377493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$tarea_lab_4_solution.coverage" NAME="tarea_lab_4_solution Coverage Results" MODIFIED="1789482527373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$sesion10_1numpy.coverage" NAME="sesion10-1numpy Coverage Results" MODIFIED="1791808298299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$acciones.coverage" NAME="acciones Coverage Results" MODIFIED="1771258460035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
     <SUITE FILE_PATH="coverage/stunning_doodad$EC9.coverage" NAME="EC9 Coverage Results" MODIFIED="1771262380765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$EG4.coverage" NAME="EG4 Coverage Results" MODIFIED="1788880559074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$6_2_tablas.coverage" NAME="6-2 tablas Coverage Results" MODIFIED="1789482531327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$sesion7_1_string.coverage" NAME="sesion7-1_string Coverage Results" MODIFIED="1790001179177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$EC6.coverage" NAME="EC6 Coverage Results" MODIFIED="1770131317767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$TC3.coverage" NAME="TC3 Coverage Results" MODIFIED="1770823322309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$teoria_for.coverage" NAME="teoria_for Coverage Results" MODIFIED="1788785875472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$estado.coverage" NAME="estado Coverage Results" MODIFIED="1772034318954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PF" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$sesion10_2matplotlib.coverage" NAME="sesion10-2matplotlib Coverage Results" MODIFIED="1791811590036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$sesion10_1machupicchu.coverage" NAME="sesion10-1machupicchu Coverage Results" MODIFIED="1791812230254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$tarea.coverage" NAME="tarea Coverage Results" MODIFIED="1787026513327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$kain.coverage" NAME="kain Coverage Results" MODIFIED="1786634431632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$tarea_lab_3_solution.coverage" NAME="tarea_lab_3_solution Coverage Results" MODIFIED="1789139633089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
@@ -361,6 +381,7 @@
     <SUITE FILE_PATH="coverage/stunning_doodad$sesion6_2_bucles_anidados.coverage" NAME="sesion6-2_bucles-anidados Coverage Results" MODIFIED="1789485498369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$sesion6_3_local.coverage" NAME="sesion6-3_local Coverage Results" MODIFIED="1789656128198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$labor.coverage" NAME="labor Coverage Results" MODIFIED="1788882250446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
+    <SUITE FILE_PATH="coverage/stunning_doodad$sesion10_1peru.coverage" NAME="sesion10-1peru Coverage Results" MODIFIED="1791811999264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
     <SUITE FILE_PATH="coverage/stunning_doodad$imagen_primer.coverage" NAME="imagen_primer Coverage Results" MODIFIED="1770138557810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$sesion3.coverage" NAME="sesion3 Coverage Results" MODIFIED="1770130441776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah" />
     <SUITE FILE_PATH="coverage/stunning_doodad$1berjecicio.coverage" NAME="1berjecicio Coverage Results" MODIFIED="1786635672513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gah2-ep2" />
